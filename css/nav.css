@@ -1,0 +1,283 @@
+/* 1. NAVBAR BASE STYLES (Non-Responsive) */
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+	border: none !important;
+}
+
+/* Main Nav Links */
+
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
+	color: #fff;
+}
+
+/* Active / Open States */
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:hover,
+.navbar-inverse .navbar-nav>.open>a:focus {
+	background-color: #0132A1;
+	color: #fff;
+}
+
+/* Dropdown Menus (Desktop) */
+.dropdown-menu {
+	background-color: #fff;
+	min-width: 200px;
+	border: none;
+	padding: 0px;
+	border-radius: 0px;
+}
+
+.dropdown-menu>li>a {
+	color: #3C4643;
+	line-height: 24px;
+	font-size: 14px;
+	padding: 10px 24px;
+}
+
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus {
+	background-color: #f1f1f1;
+	color: #3C4643;
+	background-image: none;
+}
+
+/* 2. SIDEBAR MENU STYLES */
+.sidebar_menu {
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+	margin-top: 20px;
+	padding: 0px;
+	background-color: #ffffff;
+    border: 1px solid #e7e7e7;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border-radius: 0 0 2px 2px;
+
+    overflow: visible !important;
+    position: relative;
+}
+
+
+/* បង្កើត Scroll នៅលើ UL ខាងក្នុងវិញ */
+.sidebar_menu>ul#menu {
+    max-height: calc(100vh - 160px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+/* បន្ថែមរចនាប័ទ្ម Scrollbar ឱ្យតូចស្អាត */
+.sidebar_menu>ul#menu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar_menu>ul#menu::-webkit-scrollbar-thumb {
+    background: #0132A1;
+    border-radius: 10px;
+}
+
+
+.sidebar_menu ul {
+	font-size: 14px;
+	letter-spacing: 0.2px;
+	padding: 0px;
+    margin-bottom: 0px;
+	list-style: none;
+}
+
+.sidebar_menu ul li {
+	display: block;
+	position: relative;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+    transition: all 0.3s ease;
+}
+
+/* Main Links */
+.sidebar_menu ul li a {
+	display: block;
+	text-decoration: none;
+	background: #ffffff;
+	color: #3C4643;
+	letter-spacing: 0.2px;
+	padding: 10px 15px 10px 15px;
+	white-space: nowrap;
+}
+
+.sidebar_menu ul li a:hover {
+	background: #f1f1f1;
+}
+
+.sidebar_menu ul li:last-child a {
+    border-radius: 0 0 2px 2px;
+}
+
+.sidebar_menu ul li:last-child a:hover {
+    border-radius: 0 0 2px 2px;
+}
+
+/* Arrow Icon */
+.sidebar_menu ul li a:after {
+	background: none;
+	width: auto;
+	height: auto;
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	content: "\f105";
+	margin-top: -2px;
+	float: right;
+	color: #3C4643;
+	font-size: 14px;
+	display: inline-block;
+}
+
+/* View All Categories */
+.sidebar_menu ul li.product-category a {
+	font-weight: 500;   
+}
+
+/* Hamburger/Menu Icon for 'View All Categories' */
+.sidebar_menu ul li a.all-cat-icon::after {
+	background: none;
+	width: auto;
+	height: auto;
+	font-family: "Font Awesome 6 Free";
+	font-weight: 700;
+	content: "\f0c9";
+	position: relative;
+	vertical-align: middle;
+	font-size: 14px;
+	margin-top: -2px;
+}
+
+/* Sub-Menu (Level 2) */
+.sidebar_menu li ul {
+	display: none;
+	margin: 0;
+	width: 280px;
+    position: fixed;
+	z-index: 99999;
+	background: #fff;
+    box-shadow: 10px 0px 30px rgba(0, 0, 0, 0.15); 
+    border: 1px solid #e7e7e7;
+    border-radius: 0 2px 2px 2px;
+}
+
+.sidebar_menu li:hover ul {
+    display: none;
+}
+
+.sidebar_menu ul li ul a:after {
+	content: none;
+	background: none;
+}
+
+.sidebar_menu ul li ul li a {
+	padding: 10px 20px;
+	border-bottom: none;
+}
+
+.sidebar_menu ul li a img,
+.sidebar_menu ul li a i {
+	width: auto;
+	height: auto;
+	margin-top: -4px;
+	margin-right: 12px;
+	vertical-align: middle;
+	border: none;
+	display: inline-block;
+}
+
+@media (max-width: 1024px) {
+	/* Logo លើ Mobile */
+	.logo_cus {
+		padding-left: 5px;
+	}
+
+	.row.visible-xs {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+    /* បន្ថែមចម្ងាយឱ្យ Header */
+	.navbar-header {
+		padding-right: 0px !important;
+		text-align: right;  
+        position: relative;
+        z-index: 10000;
+	}
+
+	/* Hamburger Icon (Font Awesome) */
+	.navbar-toggle .fa-bars {
+		color: #0132A1 !important;
+		font-size: 25px;
+	}
+	.navbar-toggle {
+		display: block !important;
+    	background-color: transparent;
+		padding: 5px 5px;
+		margin-top: 20px;
+	}
+
+    /* ផ្នែក Mobile Menu ដែលបានកែសម្រួលរួច */
+	.navbar-collapse.collapse.in {
+		display: block !important;
+		background-color: #0132A1 !important;
+		border: none;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        right: 0;
+        z-index: 9999; 
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+	}
+
+    /* Menu មេ ចេញពណ៌ស */
+    .navbar-nav > li > a {
+		position: relative !important;
+        color: #ffff !important;
+        background-color: transparent !important;
+        padding: 10px 15px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Dropdown Menu */
+    .navbar-nav .open .dropdown-menu {
+        display: block !important;
+        position: static !important;
+        float: none !important;
+        width: 100% !important;
+        background-color: #0132A1 !important;
+        border: none !important;
+    }
+
+    .navbar-nav .open .dropdown-menu > li > a {
+        color: #ffffff !important;
+        padding: 10px 15px 10px 45px !important;
+        background: none !important;
+    }
+
+    .navbar-nav > li.dropdown.open > a:after {
+        transform: rotate(90deg);
+        transition: 0.3s;
+    }
+ 
+	/* បន្ថែមសញ្ញាព្រួញ > នៅខាងស្តាំដៃលើ Mobile */
+	.navbar-nav>li>a:after {
+		font-family: "Font Awesome 6 Free";
+		font-weight: 900 !important;
+		content: "\f105" !important;
+		float: right !important;
+		color: #ffffff !important;
+	}
+
+	/* សម្រាប់ Products/Services ឱ្យចេញព្រួញចុះក្រោម */
+	.navbar-nav>li.dropdown>a:after {
+		content: "\f107" !important;
+	}
+}

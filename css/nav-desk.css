@@ -1,0 +1,154 @@
+/* 1. BASE STRUCTURE & WRAPPER STYLES */
+.header-border-fix-wrapper,
+.main.hidden-xs {
+    width: 100%;
+}
+
+.cbp-hsmenu-wrapper {
+    width: auto;
+    position: relative !important;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.cbp-hsinner {
+    position: relative;
+    z-index: 100;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* 2. MENU ITEMS (ALL CATEGORIES & MAIN MENU) */
+.btn-all-cat,
+.cbp-hsmenu>li>a {
+    background: none;
+    border: none;
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    color: #3C4643;
+    font-size: 14px;
+    position: relative;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    padding: 0 20px;
+    letter-spacing: 0.5px;
+    line-height: normal;
+}
+
+/* ឱ្យ All Categories នៅកៀនឆ្វេងបំផុត */
+.all-cat-dropdown-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.btn-all-cat {
+    padding-left: 0;
+    gap: 8px;
+}
+
+.cbp-hsmenu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+}
+
+/* 3. HOVER EFFECTS & BOTTOM LINE */
+.btn-all-cat::after,
+.cbp-hsmenu>li>a::after,
+.header-user-actions .action-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    right: 8px;
+    height: 2px;
+    background-color: #0132A1;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+
+.btn-all-cat::after {
+    left: 0;
+}
+
+/* Hover States */
+.all-cat-dropdown-wrapper:hover .btn-all-cat,
+.cbp-hsmenu>li>a:hover,
+.header-user-actions .action-item:hover {
+    color: #0132A1;
+}
+
+.all-cat-dropdown-wrapper:hover .btn-all-cat::after,
+.cbp-hsmenu>li>a:hover::after,
+.header-user-actions .action-item:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* 4. DROPDOWN SIDEBAR */
+.dropdown-sidebar-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 300px;
+    z-index: 9999;
+    margin-top: -20px;
+}
+
+.all-cat-dropdown-wrapper:hover .dropdown-sidebar-content {
+    display: block;
+}
+
+.dropdown-sidebar-content .vertical-menu {
+    width: 100% !important;
+    background: #fff;
+    list-style: none;
+    padding: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 5. USER ACTIONS (Contact Us, Sign In) */
+.header-user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-user-actions .action-item {
+    color: #3C4643;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 0 10px;
+    letter-spacing: 0.5px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* 6. CLEANUP */
+.cbp-hssubmenu,
+.cbp-hsmenu>li>a:not(:only-child):before,
+.no-touch .cbp-hsmenubg {
+    display: none !important;
+}
+
+@media (min-width: 1025px) {
+    .cbp-hsinner {
+        max-width: 100% !important;
+    }
+}
