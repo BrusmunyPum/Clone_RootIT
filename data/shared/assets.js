@@ -1,8 +1,9 @@
-﻿(function() {
+﻿(function () {
   var localAssetMap = {
     "A3HMG-003KH.jpg": "./userfiles/thumbs/A3HMG-003KH.jpg",
     "A514-56P-580G-9.jpg": "./userfiles/thumbs/A514-56P-580G-9.jpg",
-    "A515-58P-77Y4-Ci7-1355U-1.png": "./userfiles/thumbs/A515-58P-77Y4-Ci7-1355U-1.png",
+    "A515-58P-77Y4-Ci7-1355U-1.png":
+      "./userfiles/thumbs/A515-58P-77Y4-Ci7-1355U-1.png",
     "accessories-icon.png": "./images/accessories-icon.png",
     "acer-logo.png": "./userfiles/thumbs/acer-logo.png",
     "adata-logo.png": "./userfiles/thumbs/adata-logo.png",
@@ -27,7 +28,8 @@
     "dahua-logo.png": "./userfiles/thumbs/dahua-logo.png",
     "DCP-T830DW.jpg": "./userfiles/thumbs/DCP-T830DW.jpg",
     "Deco-BE25(3-pack).jpg": "./userfiles/thumbs/Deco-BE25(3-pack).jpg",
-    "Dell- Alienware-Core-i9-14900F-16GB-1.png": "./userfiles/thumbs/Dell-%2520Alienware-Core-i9-14900F-16GB-1.png",
+    "Dell- Alienware-Core-i9-14900F-16GB-1.png":
+      "./userfiles/thumbs/Dell-%2520Alienware-Core-i9-14900F-16GB-1.png",
     "dell1400-x-560.jpg": "./userfiles/dell1400-x-560.jpg",
     "Dell-7440.jpg": "./userfiles/thumbs/Dell-7440.jpg",
     "dell-Aurora-R16-8.jpg": "./userfiles/thumbs/dell-Aurora-R16-8.jpg",
@@ -36,7 +38,8 @@
     "Dell-Latitude-5450.jpg": "./userfiles/thumbs/Dell-Latitude-5450.jpg",
     "Dell-Plus-7020.jpg": "./userfiles/thumbs/Dell-Plus-7020.jpg",
     "desktop-icon.png": "./images/desktop-icon.png",
-    "DH-IPC-HFW2849TL-S-PRO.jpg": "./userfiles/thumbs/DH-IPC-HFW2849TL-S-PRO.jpg",
+    "DH-IPC-HFW2849TL-S-PRO.jpg":
+      "./userfiles/thumbs/DH-IPC-HFW2849TL-S-PRO.jpg",
     "diamond-network-logo.png": "./userfiles/thumbs/diamond-network-logo.png",
     "d-link-logo.png": "./userfiles/thumbs/d-link-logo.png",
     "DS-2CD1043G2-LIUF-4MP.jpg": "./userfiles/thumbs/DS-2CD1043G2-LIUF-4MP.jpg",
@@ -77,7 +80,8 @@
     "Lenovo-L15-1.jpg": "./userfiles/thumbs/Lenovo-L15-1.jpg",
     "lenovo-logo.png": "./userfiles/thumbs/lenovo-logo.png",
     "Lenovo-M70t-i5.jpg": "./userfiles/thumbs/Lenovo-M70t-i5.jpg",
-    "link_american_standard-logo.png": "./userfiles/thumbs/link_american_standard-logo.png",
+    "link_american_standard-logo.png":
+      "./userfiles/thumbs/link_american_standard-logo.png",
     "linkbasic-logo.png": "./userfiles/thumbs/linkbasic-logo.png",
     "logitech-logo.png": "./userfiles/thumbs/logitech-logo.png",
     "MFP-3103fdw.jpg": "./userfiles/thumbs/MFP-3103fdw.jpg",
@@ -100,7 +104,8 @@
     "prolink-logo.png": "./userfiles/thumbs/prolink-logo.png",
     "rack-network.png": "./images/rack-network.png",
     "RG-EW3200GX-PRO.jpg": "./userfiles/thumbs/RG-EW3200GX-PRO.jpg",
-    "RG-NBS3100-24GT4SFP-V2-1.jpg": "./userfiles/thumbs/RG-NBS3100-24GT4SFP-V2-1.jpg",
+    "RG-NBS3100-24GT4SFP-V2-1.jpg":
+      "./userfiles/thumbs/RG-NBS3100-24GT4SFP-V2-1.jpg",
     "Root-IT-Support-Logo.png": "./userfiles/logo/Root-IT-Support-Logo.png",
     "Router-RB4011iGS.jpg": "./userfiles/thumbs/Router-RB4011iGS.jpg",
     "Ruijie-RG-RAP2200(E).jpg": "./userfiles/thumbs/Ruijie-RG-RAP2200(E).jpg",
@@ -134,7 +139,8 @@
     "zkteco-sf200-0023.jpg": "./userfiles/thumbs/zkteco-sf200-0023.jpg",
     "zkteco-sf400.jpg": "./userfiles/thumbs/zkteco-sf400.jpg",
     "zycoo-logo.png": "./userfiles/thumbs/zycoo-logo.png",
-    "Dell- Alienware-Core-i9-14900F-16GB-1.png": "./userfiles/thumbs/Dell- Alienware-Core-i9-14900F-16GB-1.png"
+    "Dell- Alienware-Core-i9-14900F-16GB-1.png":
+      "./userfiles/thumbs/Dell- Alienware-Core-i9-14900F-16GB-1.png",
   };
 
   function resolveLocalAsset(url) {
@@ -150,12 +156,15 @@
   function createBrandFallback(label) {
     var fallback = document.createElement("div");
     fallback.className = "brand-fallback";
-    fallback.innerHTML = '<i class="fa-solid fa-building"></i><span>' + (label || "Brand") + "</span>";
+    fallback.innerHTML =
+      '<i class="fa-solid fa-building"></i><span>' +
+      (label || "Brand") +
+      "</span>";
     return fallback;
   }
 
   function upgradeMissingBrandLogos(root) {
-    root.querySelectorAll(".event_box img").forEach(function(img) {
+    root.querySelectorAll(".event_box img").forEach(function (img) {
       var source = img.getAttribute("src") || "";
       var unresolvedLegacyAsset = source.indexOf("Leading IT Equipment") !== -1;
 
@@ -179,7 +188,7 @@
   }
 
   function applyLocalAssetTargets(root) {
-    root.querySelectorAll("[src], [href], [srcset]").forEach(function(node) {
+    root.querySelectorAll("[src], [href], [srcset]").forEach(function (node) {
       if (node.hasAttribute("src")) {
         var localSrc = resolveLocalAsset(node.getAttribute("src"));
         if (localSrc) {
@@ -212,10 +221,9 @@
   window.RootITAssets = {
     applyLocalAssetTargets: applyLocalAssetTargets,
     initLocalAssets: initLocalAssets,
-    resolveLocalAsset: resolveLocalAsset
+    resolveLocalAsset: resolveLocalAsset,
   };
 
   document.addEventListener("DOMContentLoaded", initLocalAssets);
   document.addEventListener("partials:loaded", initLocalAssets);
 })();
-

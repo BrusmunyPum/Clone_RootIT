@@ -3,34 +3,40 @@
 window.RootITPage = window.RootITPage || {};
 
 function bindSearchPopupHandlers() {
-  $(document).off("click.rootitSearchOpen", ".search-toggle-btn").on("click.rootitSearchOpen", ".search-toggle-btn", function(e) {
-    var $searchBox = $("#globalSearchBox");
-    if (!$searchBox.length) return;
-    e.preventDefault();
-    $searchBox.fadeIn(300);
-    $("body").css("overflow", "hidden");
-    setTimeout(function() {
-      $searchBox.find(".txt_cus").first().focus();
-    }, 400);
-  });
+  $(document)
+    .off("click.rootitSearchOpen", ".search-toggle-btn")
+    .on("click.rootitSearchOpen", ".search-toggle-btn", function (e) {
+      var $searchBox = $("#globalSearchBox");
+      if (!$searchBox.length) return;
+      e.preventDefault();
+      $searchBox.fadeIn(300);
+      $("body").css("overflow", "hidden");
+      setTimeout(function () {
+        $searchBox.find(".txt_cus").first().focus();
+      }, 400);
+    });
 
-  $(document).off("click.rootitSearchClose", ".close-search-btn").on("click.rootitSearchClose", ".close-search-btn", function(e) {
-    var $searchBox = $("#globalSearchBox");
-    if (!$searchBox.length) return;
-    e.preventDefault();
-    $searchBox.fadeOut(300);
-    $(".search-results-wrapper").hide();
-    $("body").css("overflow", "auto");
-  });
-
-  $(document).off("keydown.rootitSearchEscape").on("keydown.rootitSearchEscape", function(e) {
-    var $searchBox = $("#globalSearchBox");
-    if (e.key === "Escape" && $searchBox.is(":visible")) {
+  $(document)
+    .off("click.rootitSearchClose", ".close-search-btn")
+    .on("click.rootitSearchClose", ".close-search-btn", function (e) {
+      var $searchBox = $("#globalSearchBox");
+      if (!$searchBox.length) return;
+      e.preventDefault();
       $searchBox.fadeOut(300);
       $(".search-results-wrapper").hide();
       $("body").css("overflow", "auto");
-    }
-  });
+    });
+
+  $(document)
+    .off("keydown.rootitSearchEscape")
+    .on("keydown.rootitSearchEscape", function (e) {
+      var $searchBox = $("#globalSearchBox");
+      if (e.key === "Escape" && $searchBox.is(":visible")) {
+        $searchBox.fadeOut(300);
+        $(".search-results-wrapper").hide();
+        $("body").css("overflow", "auto");
+      }
+    });
 }
 
 function initIndexPage() {
@@ -39,7 +45,7 @@ function initIndexPage() {
   }
 
   if ($(".toggle-password").length > 0) {
-    $(document).on("click", ".toggle-password", function() {
+    $(document).on("click", ".toggle-password", function () {
       const targetSelector = $(this).attr("data-target");
       const input = $(targetSelector);
 
@@ -62,14 +68,17 @@ function initIndexPage() {
       loop: false,
       effect: "fade",
       fadeEffect: {
-        crossFade: true
+        crossFade: true,
       },
       speed: 1000,
       autoplay: false,
       preloadImages: true,
       updateOnImagesReady: true,
       pagination: { el: ".swiper-pagination", clickable: true },
-      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
   }
 
@@ -79,7 +88,7 @@ function initIndexPage() {
       slidesPerView: 4,
       freeMode: true,
       watchSlidesProgress: true,
-      breakpoints: { 320: { slidesPerView: 3 }, 768: { slidesPerView: 4 } }
+      breakpoints: { 320: { slidesPerView: 3 }, 768: { slidesPerView: 4 } },
     });
 
     new Swiper(".productSwiper", {
@@ -87,8 +96,11 @@ function initIndexPage() {
       autoHeight: true,
       spaceBetween: 10,
       autoplay: { delay: 3500, disableOnInteraction: false },
-      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-      thumbs: { swiper: swiperThumbs }
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: { swiper: swiperThumbs },
     });
   }
 
@@ -102,13 +114,13 @@ function initIndexPage() {
         320: { slidesPerView: 3, spaceBetween: 10 },
         768: { slidesPerView: 5, spaceBetween: 15 },
         1200: { slidesPerView: 7, spaceBetween: 20 },
-        1400: { slidesPerView: 8, spaceBetween: 20 }
-      }
+        1400: { slidesPerView: 8, spaceBetween: 20 },
+      },
     });
   }
 
   if ($(".productSlider").length > 0) {
-    $(".productSlider").each(function() {
+    $(".productSlider").each(function () {
       var $slider = $(this);
       var $wrapper = $slider.closest(".product_wrapper");
       var nextEl = $wrapper.find(".swiper-button-next").get(0);
@@ -124,28 +136,33 @@ function initIndexPage() {
           480: { slidesPerView: 2, spaceBetween: 10 },
           768: { slidesPerView: 4, spaceBetween: 15 },
           1366: { slidesPerView: 5, spaceBetween: 20 },
-          1920: { slidesPerView: 6, spaceBetween: 20 }
-        }
+          1920: { slidesPerView: 6, spaceBetween: 20 },
+        },
       });
     });
   }
 
   if ($(window).width() > 768) {
-    $("li.dropdown").hover(function() {
-      $(this).find(".dropdown-menu").stop(true, true).delay(200).fadeIn(500);
-    }, function() {
-      $(this).find(".dropdown-menu").stop(true, true).delay(200).fadeOut(500);
-    });
+    $("li.dropdown").hover(
+      function () {
+        $(this).find(".dropdown-menu").stop(true, true).delay(200).fadeIn(500);
+      },
+      function () {
+        $(this).find(".dropdown-menu").stop(true, true).delay(200).fadeOut(500);
+      },
+    );
   }
 
   bindSearchPopupHandlers();
 
   let ajaxRequest;
 
-  $(document).on("keyup", ".txt_cus", function() {
+  $(document).on("keyup", ".txt_cus", function () {
     let $input = $(this);
     let query = $input.val();
-    let $container = $input.closest(".search-flex-container").find(".search-results-wrapper");
+    let $container = $input
+      .closest(".search-flex-container")
+      .find(".search-results-wrapper");
 
     if (ajaxRequest) {
       ajaxRequest.abort();
@@ -156,36 +173,40 @@ function initIndexPage() {
         url: "/ajax-search.php",
         method: "POST",
         data: { query: query },
-        success: function(data) {
+        success: function (data) {
           $container.html(data).show();
         },
-        error: function(xhr) {
+        error: function (xhr) {
           if (xhr.statusText !== "abort") {
             console.error("Search Error Status: " + xhr.status);
           }
-        }
+        },
       });
     } else {
       $container.hide();
     }
   });
 
-  $(document).on("click", function(e) {
+  $(document).on("click", function (e) {
     if (!$(e.target).closest(".search-flex-container").length) {
       $(".search-results-wrapper").hide();
     }
   });
 
-  if ($("[data-toggle=\"popover\"]").length > 0) {
-    $("[data-toggle=\"popover\"]").popover({
+  if ($('[data-toggle="popover"]').length > 0) {
+    $('[data-toggle="popover"]').popover({
       trigger: "hover focus",
       html: true,
-      container: "body"
+      container: "body",
     });
 
-    $("body").on("click", function(e) {
-      $("[data-toggle=\"popover\"]").each(function() {
-        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $(".popover").has(e.target).length === 0) {
+    $("body").on("click", function (e) {
+      $('[data-toggle="popover"]').each(function () {
+        if (
+          !$(this).is(e.target) &&
+          $(this).has(e.target).length === 0 &&
+          $(".popover").has(e.target).length === 0
+        ) {
           $(this).popover("hide");
         }
       });
@@ -204,36 +225,40 @@ function bindSharedLayoutBehavior() {
     }
   }
 
-  $(window).off("scroll.rootitSticky").on("scroll.rootitSticky", syncStickyHeader);
+  $(window)
+    .off("scroll.rootitSticky")
+    .on("scroll.rootitSticky", syncStickyHeader);
   syncStickyHeader();
 
-  document.querySelectorAll(".sidebar_menu #menu > li").forEach(function(item) {
-    item.onmouseenter = function() {
-      if (window.innerWidth > 1024) {
+  document
+    .querySelectorAll(".sidebar_menu #menu > li")
+    .forEach(function (item) {
+      item.onmouseenter = function () {
+        if (window.innerWidth > 1024) {
+          const subMenu = this.querySelector("ul");
+          if (subMenu) {
+            const rect = this.getBoundingClientRect();
+            subMenu.style.top = rect.top + "px";
+            subMenu.style.left = rect.right + "px";
+            subMenu.style.display = "block";
+          }
+        }
+      };
+
+      item.onmouseleave = function () {
         const subMenu = this.querySelector("ul");
         if (subMenu) {
-          const rect = this.getBoundingClientRect();
-          subMenu.style.top = rect.top + "px";
-          subMenu.style.left = rect.right + "px";
-          subMenu.style.display = "block";
+          subMenu.style.display = "none";
         }
-      }
-    };
-
-    item.onmouseleave = function() {
-      const subMenu = this.querySelector("ul");
-      if (subMenu) {
-        subMenu.style.display = "none";
-      }
-    };
-  });
+      };
+    });
 
   if (window.RootITPage.hideSidebarSubMenus) {
     window.removeEventListener("scroll", window.RootITPage.hideSidebarSubMenus);
   }
 
-  window.RootITPage.hideSidebarSubMenus = function() {
-    document.querySelectorAll(".sidebar_menu #menu ul").forEach(function(ul) {
+  window.RootITPage.hideSidebarSubMenus = function () {
+    document.querySelectorAll(".sidebar_menu #menu ul").forEach(function (ul) {
       ul.style.display = "none";
     });
   };
@@ -243,8 +268,8 @@ function bindSharedLayoutBehavior() {
 
 const profileForms = ["#profileForm", "#passForm"];
 
-$.each(profileForms, function(index, formId) {
-  $(document).on("submit", formId, function(e) {
+$.each(profileForms, function (index, formId) {
+  $(document).on("submit", formId, function (e) {
     e.preventDefault();
 
     const $form = $(this);
@@ -260,7 +285,7 @@ $.each(profileForms, function(index, formId) {
       data: formData,
       processData: false,
       contentType: false,
-      success: function(response) {
+      success: function (response) {
         const res = response.trim().split("|");
         if (res[0] === "success") {
           alert(res[1]);
@@ -270,16 +295,16 @@ $.each(profileForms, function(index, formId) {
           $btn.prop("disabled", false).text(originalBtnText);
         }
       },
-      error: function() {
+      error: function () {
         alert("Connection Error!");
         $btn.prop("disabled", false).text(originalBtnText);
-      }
+      },
     });
   });
 });
 
 $(document).ready(initIndexPage);
-document.addEventListener("partials:loaded", function() {
+document.addEventListener("partials:loaded", function () {
   bindSharedLayoutBehavior();
   bindSearchPopupHandlers();
 });

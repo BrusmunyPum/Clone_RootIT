@@ -1,5 +1,4 @@
 ﻿<!doctype html>
-<!-- saved from url=(0026)https://rootitsupport.com/ -->
 <html
   lang="en-US"
   class="js no-touch generatedcontent"
@@ -27,7 +26,7 @@
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer");
     </script>
-    <!-- Google Tag Manager -->
+    <!-- Analytics: lazy-load Google Tag Manager after user interaction -->
     <script>
       var gtmFlag = false;
       function loadGTM() {
@@ -48,15 +47,15 @@
         })(window, document, "script", "dataLayer", "GTM-NPKDQCPZ");
       }
 
-      // Load áž“áŸ…áž–áŸáž› User áž˜áž¶áž“ážŸáž€áž˜áŸ’áž˜áž—áž¶áž– (áž¢áž¼ážŸáž¢áŸáž€áŸ’ážšáž„áŸ‹, áž”áŸ‰áŸ‡, áž¬áž€áž˜áŸ’ážšáž¾áž€ Mouse)
+      // Load GTM after the user starts interacting with the page.
       window.addEventListener("scroll", loadGTM, { passive: true });
       window.addEventListener("mousemove", loadGTM, { passive: true });
       window.addEventListener("touchstart", loadGTM, { passive: true });
 
-      // Delay ážŠáž›áŸ‹ 8 ážœáž·áž“áž¶áž‘áž¸ ážŠáž¾áž˜áŸ’áž”áž¸áž±áŸ’áž™ PageSpeed Score
+      // Fallback: load GTM automatically after 8 seconds.
       setTimeout(loadGTM, 8000);
     </script>
-    <!-- End Google Tag Manager -->
+    <!-- End analytics -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -111,7 +110,7 @@
     />
     <link rel="preconnect" href="https://www.googletagmanager.com/" />
     <link rel="preconnect" href="https://www.google-analytics.com/" />
-    <!-- CSS Includes -->
+    <!-- Stylesheets -->
     <link href="./css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/all.min.css" />
     <link
@@ -127,9 +126,11 @@
     <link rel="stylesheet" type="text/css" href="./css/index-page.css" />
     <link rel="preload" href="./partials/header.html" as="fetch" />
     <link rel="preload" href="./partials/footer.html" as="fetch" />
-    <script src="./seed/data.js"></script>
-    <script src="./seed/data_index.js"></script>
-    <script src="./js/partials.js"></script>
+    <!-- Shared frontend data and layout helpers -->
+    <script src="./data/shared/assets.js"></script>
+    <script src="./data/pages/index.js"></script>
+    <script src="./js/shared/partials.js"></script>
+    <!-- SEO structured data -->
     <script type="application/ld+json">
       [
         {
@@ -190,9 +191,10 @@
     </script>
   </head>
   <body>
+    <!-- Shared site header injected from partials -->
     <div id="site-header"></div>
-    <!-- Slideshow -->
     <main>
+      <!-- Hero slider -->
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
@@ -290,6 +292,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Popular categories and quotation call-to-action -->
       <div class="category-cta-wrapper" style="padding: 25px 0">
         <div class="container-fluid">
           <div class="row custom-row">
@@ -525,8 +529,11 @@
           </div>
         </div>
       </div>
+
+      <!-- Dynamic product sections rendered from page data -->
       <div id="index-product-sections"></div>
-      <!-- Latest Event/Client Logos Section -->
+
+      <!-- Brand logo carousel -->
       <div class="latest_event">
         <div class="container-fluid news-layout">
           <div class="swiper brandSwiper swiper-initialized swiper-horizontal">
@@ -1707,13 +1714,18 @@
         </div>
       </div>
     </main>
-    <!-- Footer and Closing Scripts -->
+
+    <!-- Shared site footer injected from partials -->
     <div id="site-footer"></div>
+
+    <!-- Vendor scripts -->
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/modernizr.custom.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/index-products.js"></script>
-    <script src="./js/index-page.js"></script>
+
+    <!-- Page-specific scripts -->
+    <script src="./js/pages/index-products.js"></script>
+    <script src="./js/shared/layout.js"></script>
   </body>
 </html>
