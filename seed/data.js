@@ -1,4 +1,4 @@
-(function() {
+﻿(function() {
   var localAssetMap = {
     "A3HMG-003KH.jpg": "./userfiles/thumbs/A3HMG-003KH.jpg",
     "A514-56P-580G-9.jpg": "./userfiles/thumbs/A514-56P-580G-9.jpg",
@@ -209,6 +209,13 @@
     upgradeMissingBrandLogos(document);
   }
 
+  window.RootITAssets = {
+    applyLocalAssetTargets: applyLocalAssetTargets,
+    initLocalAssets: initLocalAssets,
+    resolveLocalAsset: resolveLocalAsset
+  };
+
   document.addEventListener("DOMContentLoaded", initLocalAssets);
   document.addEventListener("partials:loaded", initLocalAssets);
 })();
+
