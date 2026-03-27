@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function (w, i, g) {
+        w[g] = w[g] || [];
+        if (typeof w[g].push == "function") w[g].push(i);
+      })(window, "GTM-NPKDQCPZ", "google_tags_first_party");
+    </script>
+    <script>
+      (function (w, d, s, l) {
+        w[l] = w[l] || [];
+        (function () {
+          w[l].push(arguments);
+        })("set", "developer_id.dYzg1YT", true);
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s);
+        j.async = true;
+        j.src = "/l99x/";
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer");
+    </script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <title>Sign In | Root IT Support</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../css/nav-desk.css" />
+    <link rel="stylesheet" type="text/css" href="../css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index-page.css" />
+    <link rel="stylesheet" type="text/css" href="../css/auth.css" />
+    <link rel="preload" href="../partials/header.html" as="fetch" />
+    <link rel="preload" href="../partials/footer.html" as="fetch" />
+    <script src="../js/shared/partials.js"></script>
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main>
+      <section class="auth-page-shell">
+        <div class="container-fluid">
+          <div class="auth-card">
+            <h1 class="auth-title">Sign In</h1>
+
+            <div class="auth-demo-credentials">
+              <strong>Demo account:</strong>
+              <code>demo@rootit.local</code> /
+              <code>RootIT123!</code>
+            </div>
+
+            <form data-auth-form="login">
+              <div class="auth-alert" aria-live="polite"></div>
+
+              <div class="auth-field">
+                <label class="auth-label" for="login-email">
+                  Email or Phone Number <span class="required">*</span>
+                </label>
+                <div class="auth-input-wrap">
+                  <input
+                    class="auth-input"
+                    id="login-email"
+                    type="text"
+                    placeholder="example@mail.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="auth-field">
+                <label class="auth-label" for="login-password">
+                  Password <span class="required">*</span>
+                </label>
+                <div class="auth-input-wrap">
+                  <input
+                    class="auth-input"
+                    id="login-password"
+                    type="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                  <button
+                    class="auth-toggle-password"
+                    type="button"
+                    data-password-toggle="login-password"
+                    aria-label="Show password"
+                  >
+                    <i class="fa-regular fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="auth-meta">
+                <a class="auth-link" href="#">Forgot Password?</a>
+              </div>
+
+              <button class="auth-submit" type="submit">Sign In</button>
+
+              <div class="auth-footer">
+                Don&apos;t have an account?
+                <a class="auth-link" href="./register.html">Create an account</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/modernizr.custom.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/pages/auth.js"></script>
+    <script src="../js/shared/layout.js"></script>
+  </body>
+</html>

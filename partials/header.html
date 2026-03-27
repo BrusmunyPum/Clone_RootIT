@@ -89,17 +89,42 @@
         </div>
       </div>
       <div class="header-user-actions">
-        <a href="https://rootitsupport.com/contact-us" class="action-item">
+        <a href="/components/contact-me.html" class="action-item">
           <i class="fa-solid fa-headset"> </i> Contact Us</a
-        >
-        <a
-          href="https://rootitsupport.com/login"
-          class="action-item"
-          id="loginTrigger"
-          aria-label="Sign in to your account"
-        >
-          <i class="fa-solid fa-user"> </i> Sign In</a
-        >
+        >        <div class="action-item user-dropdown" style="position: relative">
+          <a
+            href="/components/login.html"
+            class="user-trigger"
+            id="loginTrigger"
+            aria-label="Sign in to your account"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              text-decoration: none;
+              color: inherit;
+            "
+          >
+            <i class="fa-solid fa-user"> </i> Sign In
+          </a>
+          <ul class="dropdown-menu-list" id="userDropdownMenu" style="display: none">
+            <li>
+              <a href="/components/dashboard.html#profile" id="userProfileLink">
+                <i class="fa-solid fa-circle-user"></i> My Profile
+              </a>
+            </li>
+            <li>
+              <a href="/components/dashboard.html#inquiries" id="userInquiriesLink">
+                <i class="fa-solid fa-file-lines"></i> My Inquiries
+              </a>
+            </li>
+            <li>
+              <a href="#" id="logoutTrigger" class="user-logout-link">
+                <i class="fa-solid fa-power-off"></i> Log Out
+              </a>
+            </li>
+          </ul>
+        </div>
         <div class="action-item inquiry-dropdown" style="position: relative">
           <a
             href="../components/cart.html"
@@ -858,7 +883,7 @@
               </ul>
             </li>
             <li>
-              <a href="https://rootitsupport.com/contact-us">Contact Us</a>
+              <a href="/components/contact-me.html">Contact Us</a>
             </li>
           </ul>
         </nav>
@@ -866,3 +891,7 @@
     </div>
   </div>
 </header>
+
+
+
+

@@ -55,6 +55,34 @@
   display: block;
 }
 
+.user-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.user-trigger .fa-chevron-down {
+  font-size: 10px;
+  margin-left: 2px;
+}
+
+.user-dropdown.is-authenticated > .user-trigger {
+  color: #0132A1;
+  font-weight: 600;
+}
+
+.user-dropdown.is-authenticated > .user-trigger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -11px;
+  height: 3px;
+  background: #0132A1;
+}
+
 .dropdown-menu-list li a {
   display: block;
   padding: 10px 15px;
@@ -74,6 +102,11 @@
   margin-right: 10px;
   width: 16px;
   text-align: center;
+}
+
+.user-logout-link,
+.user-logout-link i {
+  color: #ff2d20 !important;
 }
 
 .inquiry-count-badge {

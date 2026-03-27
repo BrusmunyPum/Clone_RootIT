@@ -2,6 +2,97 @@
 
 window.RootITPage = window.RootITPage || {};
 
+window.RootITAuth = window.RootITAuth || {
+  demoUser: {
+    firstName: "Demo",
+    lastName: "User",
+    email: "demo@rootit.local",
+    password: "RootIT123!",
+    phone: "012345678",
+  },
+  storageKey: "rootit_demo_auth_user",
+};
+
+function getStoredAuthUser() {
+  try {
+    var raw = window.localStorage.getItem(window.RootITAuth.storageKey);
+    return raw ? JSON.parse(raw) : null;
+  } catch (error) {
+    return null;
+  }
+}
+
+function setStoredAuthUser(user) {
+  try {
+    if (user) {
+      window.localStorage.setItem(window.RootITAuth.storageKey, JSON.stringify(user));
+    } else {
+      window.localStorage.removeItem(window.RootITAuth.storageKey);
+    }
+  } catch (error) {
+    // Ignore demo storage errors in static mode.
+  }
+}
+
+window.RootITAuth.getUser = getStoredAuthUser;
+window.RootITAuth.setUser = setStoredAuthUser;
+
+function renderHeaderAuthState() {
+  var loginLink = document.getElementById("loginTrigger");
+  if (!loginLink) {
+    return;
+  }
+
+  var userDropdown = loginLink.closest(".user-dropdown");
+  var userMenu = document.getElementById("userDropdownMenu");
+  var user = getStoredAuthUser();
+  if (!userDropdown) {
+    return;
+  }
+  if (!user) {
+    loginLink.setAttribute("href", "/components/login.html");
+    loginLink.setAttribute("aria-label", "Sign in to your account");
+    loginLink.innerHTML = '<i class="fa-solid fa-user"></i> Sign In';
+    loginLink.classList.remove("auth-user-link");
+    userDropdown.classList.remove("is-authenticated");
+    if (userMenu) {
+      userMenu.style.display = "none";
+    }
+    return;
+  }
+
+  loginLink.setAttribute("href", "/components/dashboard.html");
+  loginLink.setAttribute("aria-label", "Open your dashboard");
+  loginLink.classList.add("auth-user-link");
+  userDropdown.classList.add("is-authenticated");
+  loginLink.innerHTML =
+    '<i class="fa-solid fa-circle-user"></i> ' +
+    (user.firstName ? user.firstName : "Account") +
+    ' <i class="fa-solid fa-chevron-down"></i>';
+
+  if (userMenu) {
+    userMenu.style.display = "";
+  }
+}
+
+function bindAuthActions() {
+  $(document)
+    .off("click.rootitLogout", "#logoutTrigger")
+    .on("click.rootitLogout", "#logoutTrigger", function (e) {
+      e.preventDefault();
+      setStoredAuthUser(null);
+      renderHeaderAuthState();
+
+      if (
+        window.location.pathname.indexOf("/components/login.html") !== -1 ||
+        window.location.pathname.indexOf("/components/register.html") !== -1 ||
+        window.location.pathname.indexOf("/components/dashboard.html") !== -1
+      ) {
+        window.location.href = "/components/login.html";
+      }
+    });
+}
+
 function bindSearchPopupHandlers() {
   $(document)
     .off("click.rootitSearchOpen", ".search-toggle-btn")
@@ -311,4 +402,11 @@ $(document).ready(initIndexPage);
 document.addEventListener("partials:loaded", function () {
   bindSharedLayoutBehavior();
   bindSearchPopupHandlers();
+  renderHeaderAuthState();
+  bindAuthActions();
+});
+
+$(document).ready(function () {
+  renderHeaderAuthState();
+  bindAuthActions();
 });

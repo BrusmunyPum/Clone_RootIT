@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function (w, i, g) {
+        w[g] = w[g] || [];
+        if (typeof w[g].push == "function") w[g].push(i);
+      })(window, "GTM-NPKDQCPZ", "google_tags_first_party");
+    </script>
+    <script>
+      (function (w, d, s, l) {
+        w[l] = w[l] || [];
+        (function () {
+          w[l].push(arguments);
+        })("set", "developer_id.dYzg1YT", true);
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s);
+        j.async = true;
+        j.src = "/l99x/";
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer");
+    </script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>My Dashboard | Root IT Support</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../css/nav-desk.css" />
+    <link rel="stylesheet" type="text/css" href="../css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index-page.css" />
+    <link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
+    <link rel="preload" href="../partials/header.html" as="fetch" />
+    <link rel="preload" href="../partials/footer.html" as="fetch" />
+    <script src="../js/shared/partials.js"></script>
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main>
+      <section class="dashboard-shell">
+        <div class="container-fluid">
+          <div class="dashboard-layout">
+            <aside class="dashboard-card dashboard-sidebar">
+              <h2>Account Settings</h2>
+              <ul class="dashboard-nav">
+                <li>
+                  <a class="dashboard-nav-link is-active" href="#profile" data-dashboard-nav="profile">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span>My Profile</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dashboard-nav-link" href="#inquiries" data-dashboard-nav="inquiries">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>My Inquiries</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dashboard-nav-link" href="#address" data-dashboard-nav="address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>My Address</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dashboard-nav-link" href="#" id="dashboardLogout">
+                    <i class="fa-solid fa-power-off"></i>
+                    <span>Logout</span>
+                  </a>
+                </li>
+              </ul>
+            </aside>
+
+            <section class="dashboard-card dashboard-content">
+              <div class="dashboard-panel is-active" data-dashboard-panel="profile">
+                <div class="dashboard-alert" id="profileAlert"></div>
+                <div class="dashboard-hero">
+                  <div class="dashboard-hero-avatar" id="dashboardAvatar">D</div>
+                  <div class="dashboard-hero-copy">
+                    <span class="dashboard-kicker">Account Overview</span>
+                    <h1 class="dashboard-title dashboard-title--hero">Account Information</h1>
+                    <p id="dashboardWelcomeText">
+                      Keep your profile up to date so our team can respond faster to your inquiries.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="dashboard-stats">
+                  <article class="dashboard-stat-card">
+                    <div class="dashboard-stat-icon">
+                      <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <div>
+                      <span class="dashboard-stat-label">Profile Status</span>
+                      <strong class="dashboard-stat-value">Active</strong>
+                    </div>
+                  </article>
+
+                  <article class="dashboard-stat-card">
+                    <div class="dashboard-stat-icon">
+                      <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <div>
+                      <span class="dashboard-stat-label">Inquiry Count</span>
+                      <strong class="dashboard-stat-value" id="dashboardInquiryCount">0 requests</strong>
+                    </div>
+                  </article>
+
+                  <article class="dashboard-stat-card">
+                    <div class="dashboard-stat-icon">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                      <span class="dashboard-stat-label">Saved Addresses</span>
+                      <strong class="dashboard-stat-value" id="dashboardAddressCount">0 address</strong>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="dashboard-section-head">
+                  <div class="dashboard-section-icon">
+                    <i class="fa-solid fa-id-card"></i>
+                  </div>
+                  <div>
+                    <h2 class="dashboard-title">Personal Details</h2>
+                    <p>These details are stored locally in your browser for this demo dashboard.</p>
+                  </div>
+                </div>
+
+                <form id="dashboardProfileForm">
+                  <div class="dashboard-form-grid">
+                    <div class="dashboard-field">
+                      <label class="dashboard-label" for="dashboard-first-name">First Name</label>
+                      <input class="dashboard-input" id="dashboard-first-name" type="text" />
+                    </div>
+                    <div class="dashboard-field">
+                      <label class="dashboard-label" for="dashboard-last-name">Last Name</label>
+                      <input class="dashboard-input" id="dashboard-last-name" type="text" />
+                    </div>
+                    <div class="dashboard-field">
+                      <label class="dashboard-label" for="dashboard-email">Email Address (Read-only)</label>
+                      <input class="dashboard-input" id="dashboard-email" type="email" readonly />
+                    </div>
+                    <div class="dashboard-field">
+                      <label class="dashboard-label" for="dashboard-phone">Phone Number</label>
+                      <input class="dashboard-input" id="dashboard-phone" type="text" />
+                    </div>
+                  </div>
+
+                  <div class="dashboard-actions">
+                    <button class="dashboard-btn" type="submit">Update Profile</button>
+                  </div>
+                </form>
+
+                <div class="dashboard-security-card">
+                  <div class="dashboard-section-head dashboard-section-head--compact">
+                    <div class="dashboard-section-icon">
+                      <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                      <h2 class="dashboard-subtitle">Security Settings</h2>
+                      <p>Protect your account with stronger sign-in habits and password updates.</p>
+                    </div>
+                  </div>
+                  <button class="dashboard-pill-btn" type="button">Change Password</button>
+                </div>
+              </div>
+
+              <div class="dashboard-panel" data-dashboard-panel="inquiries">
+                <div class="dashboard-section-head dashboard-section-head--compact">
+                  <div class="dashboard-section-icon">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                  </div>
+                  <div>
+                    <h1 class="dashboard-title">Inquiry History</h1>
+                    <p>Track the product requests you send to the Root IT team.</p>
+                  </div>
+                </div>
+                <div class="dashboard-tabs">
+                  <button class="dashboard-tab is-active" type="button">All</button>
+                  <button class="dashboard-tab" type="button">Ongoing</button>
+                  <button class="dashboard-tab" type="button">Completed</button>
+                </div>
+                <div class="dashboard-empty">
+                  <i class="fa-solid fa-box-open"></i>
+                  <strong>No inquiries yet</strong>
+                  <p>You haven&apos;t placed any inquiries yet. Start exploring products and send your first request when you&apos;re ready.</p>
+                </div>
+              </div>
+
+              <div class="dashboard-panel" data-dashboard-panel="address">
+                <div class="dashboard-top-actions">
+                  <div class="dashboard-section-head dashboard-section-head--compact">
+                    <div class="dashboard-section-icon">
+                      <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <div>
+                      <h1 class="dashboard-title">My Addresses</h1>
+                      <p>Save delivery or company locations for faster inquiry follow-up later.</p>
+                    </div>
+                  </div>
+                  <button class="dashboard-btn" type="button" id="openAddressModal">
+                    <i class="fa-solid fa-plus" style="margin-right: 8px"></i>Add New Address
+                  </button>
+                </div>
+
+                <div id="addressList" class="dashboard-address-grid" style="display: none"></div>
+
+                <div class="dashboard-empty" id="addressEmptyState">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                  <strong>No address saved</strong>
+                  <p>No address found yet. Add your office, store, or delivery address to make future requests easier.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="dashboard-modal" id="addressModal" aria-hidden="true">
+      <div class="dashboard-modal-card">
+        <div class="dashboard-modal-head">
+          <h3>Add Address</h3>
+          <button class="dashboard-modal-close" type="button" id="closeAddressModal" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <form id="addressForm">
+          <div class="dashboard-form-grid">
+            <div class="dashboard-field">
+              <label class="dashboard-label" for="address-label">Label</label>
+              <input class="dashboard-input" id="address-label" type="text" placeholder="Office" required />
+            </div>
+            <div class="dashboard-field">
+              <label class="dashboard-label" for="address-phone">Phone Number</label>
+              <input class="dashboard-input" id="address-phone" type="text" placeholder="012345678" required />
+            </div>
+            <div class="dashboard-field dashboard-field--full">
+              <label class="dashboard-label" for="address-line">Address</label>
+              <textarea class="dashboard-textarea" id="address-line" placeholder="Street, district, city" required></textarea>
+            </div>
+          </div>
+
+          <div class="dashboard-actions">
+            <button class="dashboard-btn" type="submit">Save Address</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="site-footer"></div>
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/modernizr.custom.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/pages/dashboard.js"></script>
+    <script src="../js/shared/layout.js"></script>
+  </body>
+</html>
