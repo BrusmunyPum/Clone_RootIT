@@ -82,7 +82,11 @@ function initIndexPage() {
     });
   }
 
-  if ($(".productThumbs").length > 0 && $(".productSwiper").length > 0) {
+  if (
+    !$("body").hasClass("product-detail-page") &&
+    $(".productThumbs").length > 0 &&
+    $(".productSwiper").length > 0
+  ) {
     var swiperThumbs = new Swiper(".productThumbs", {
       spaceBetween: 10,
       slidesPerView: 4,

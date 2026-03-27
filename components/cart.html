@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function (w, i, g) {
+        w[g] = w[g] || [];
+        if (typeof w[g].push == "function") w[g].push(i);
+      })(window, "GTM-NPKDQCPZ", "google_tags_first_party");
+    </script>
+    <script>
+      (function (w, d, s, l) {
+        w[l] = w[l] || [];
+        (function () {
+          w[l].push(arguments);
+        })("set", "developer_id.dYzg1YT", true);
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s);
+        j.async = true;
+        j.src = "/l99x/";
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer");
+    </script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+
+    <title>My Inquiry List | Root IT Support</title>
+    <meta
+      name="description"
+      content="Review the current inquiry list and prepare items for a quotation request."
+    />
+    <meta
+      name="keywords"
+      content="Inquiry list, cart, quotation list, Root IT Support"
+    />
+    <link rel="canonical" href="https://rootitsupport.com/cart" />
+
+    <link
+      rel="shortcut icon"
+      href="https://rootitsupport.com/favicon.ico"
+      type="image/x-icon"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://rootitsupport.com/favicon.png"
+      sizes="48x48"
+    />
+    <link rel="preconnect" href="https://www.googletagmanager.com/" />
+    <link rel="preconnect" href="https://www.google-analytics.com/" />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../css/nav-desk.css" />
+    <link rel="stylesheet" type="text/css" href="../css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index-page.css" />
+    <link rel="preload" href="../partials/header.html" as="fetch" />
+    <link rel="preload" href="../partials/footer.html" as="fetch" />
+    <script src="../js/shared/partials.js"></script>
+
+    <style>
+      :root {
+        --cart-primary: #0132a1;
+        --cart-text: #3c4643;
+        --cart-soft: #64748b;
+        --cart-border: #e2e8f0;
+        --cart-bg: #f4f7f9;
+      }
+
+      body {
+        background: var(--cart-bg);
+      }
+
+      .breadcrumb_cus {
+        display: none;
+      }
+
+      .cart-page {
+        padding: 26px 0 45px;
+      }
+
+      .cart-shell {
+        background: #fff;
+        border: 1px solid #edf2f7;
+        border-radius: 4px;
+        box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+        overflow: hidden;
+      }
+
+      .cart-shell-head {
+        padding: 34px 44px 18px;
+      }
+
+      .cart-title {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--cart-text);
+        font-size: 19px;
+        font-weight: 600;
+      }
+
+      .cart-layout {
+        padding: 0 44px 44px;
+      }
+
+      .table-responsive {
+        border: none;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .cart-table {
+        margin: 0;
+      }
+
+      .cart-table thead {
+        background: #f8fafc;
+      }
+
+      .cart-table th {
+        border-bottom: 1px solid var(--cart-border) !important;
+        color: var(--cart-soft);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        padding: 18px 20px !important;
+      }
+
+      .cart-table td {
+        border-top: 1px solid #edf2f7 !important;
+        color: var(--cart-text);
+        padding: 26px 20px !important;
+        vertical-align: middle !important;
+      }
+
+      .cart-product {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .cart-product img {
+        width: 64px;
+        height: 64px;
+        object-fit: contain;
+        background: #fff;
+        flex-shrink: 0;
+      }
+
+      .cart-product-title {
+        margin: 0 0 6px;
+        font-size: 15px;
+        line-height: 1.45;
+      }
+
+      .cart-product-title a {
+        color: var(--cart-text);
+        text-decoration: none;
+      }
+
+      .cart-product-title a:hover {
+        color: var(--cart-primary);
+      }
+
+      .cart-product-meta {
+        color: var(--cart-soft);
+        font-size: 13px;
+      }
+
+      .cart-qty {
+        width: 76px;
+        height: 40px;
+        padding: 0 12px;
+        border: 1px solid var(--cart-border);
+        border-radius: 3px;
+        background: #fff;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .cart-price {
+        font-size: 16px;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+
+      .cart-line-total {
+        color: var(--cart-primary);
+        font-size: 18px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .cart-remove-btn {
+        border: none;
+        background: transparent;
+        color: #d14334;
+        border-radius: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: 400;
+        transition: 0.2s ease;
+      }
+
+      .cart-remove-btn:hover {
+        color: #b62f22;
+      }
+
+      .cart-summary {
+        background: #fff;
+        border: 1px dashed #d8e2f0;
+        border-radius: 4px;
+        padding: 34px 28px 26px;
+      }
+
+      .cart-summary h2 {
+        margin: 0 0 18px;
+        color: var(--cart-text);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .summary-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 4px 0;
+        color: var(--cart-text);
+        font-size: 16px;
+      }
+
+      .summary-note {
+        color: #4f9d43;
+      }
+
+      .summary-divider {
+        margin: 24px 0 20px;
+        border-top: 1px solid #edf2f7;
+      }
+
+      .summary-total {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 18px;
+        color: var(--cart-text);
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .summary-total strong {
+        color: var(--cart-primary);
+        font-size: 20px;
+      }
+
+      .cart-checkout {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        margin-top: 0;
+        border: none;
+        border-radius: 2px;
+        background: var(--cart-primary);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 15px 16px;
+        text-decoration: none;
+      }
+
+      .cart-checkout:hover {
+        background: #00267a;
+        color: #fff;
+      }
+
+      .cart-empty {
+        display: none;
+        text-align: center;
+        padding: 12px 20px 26px;
+      }
+
+      .cart-empty.is-visible {
+        display: block;
+      }
+
+      .cart-empty-icon {
+        width: 152px;
+        height: 152px;
+        margin: 6px auto 26px;
+        border-radius: 50%;
+        background: #f0f4ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--cart-primary);
+        font-size: 58px;
+      }
+
+      .cart-empty h3 {
+        margin: 0 0 14px;
+        color: var(--cart-text);
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .cart-empty p {
+        max-width: 480px;
+        margin: 0 auto 34px;
+        color: var(--cart-soft);
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .cart-empty .btn-checkout {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: auto;
+        margin: 0;
+        min-width: 274px;
+        min-height: 56px;
+        padding: 16px 34px;
+        border-radius: 999px;
+        background: #123da8;
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1;
+        box-shadow: none;
+        border: none;
+      }
+
+      .cart-empty .btn-checkout:hover {
+        background: #0f3593;
+        color: #fff;
+      }
+
+      .cart-empty .btn-checkout i {
+        font-size: 16px;
+      }
+
+      @media (max-width: 991px) {
+        .cart-shell-head {
+          padding-left: 26px;
+          padding-right: 26px;
+        }
+
+        .cart-layout {
+          padding-left: 26px;
+          padding-right: 26px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .cart-page {
+          padding-top: 20px;
+        }
+
+        .cart-shell-head {
+          padding-top: 24px;
+          padding-bottom: 16px;
+        }
+
+        .cart-title {
+          font-size: 18px;
+        }
+
+        .cart-product {
+          align-items: flex-start;
+        }
+
+        .cart-product img {
+          width: 64px;
+          height: 64px;
+        }
+
+        .cart-table th:nth-child(2),
+        .cart-table td:nth-child(2) {
+          display: none;
+        }
+
+        .cart-layout {
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="site-header"></div>
+
+    <main>
+      <div class="breadcrumb_cus">
+        <div class="container-fluid">
+          <ol class="breadcrumb">
+            <li><a href="/"></a></li>
+            <li class="active">Inquiry List</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="content_wrapper cart-page">
+        <div class="container-fluid">
+          <div class="cart-shell">
+            <div class="cart-shell-head">
+              <div class="cart-title">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Your Inquiry List</span>
+              </div>
+            </div>
+
+            <div class="cart-layout">
+              <div id="cart-content">
+                <div class="row">
+                  <div class="col-md-9 col-sm-12">
+                    <div class="table-responsive">
+                      <table class="table cart-table">
+                        <thead>
+                          <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody id="cart-table-body"></tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 col-sm-12">
+                    <div class="cart-summary" id="cart-summary">
+                      <h2>Inquiry Summary</h2>
+                      <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="summary-subtotal-price">$0.00</span>
+                      </div>
+                      <div class="summary-row">
+                        <span>Delivery</span>
+                        <span class="summary-note">Confirm later</span>
+                      </div>
+                      <div class="summary-divider"></div>
+                      <div class="summary-total">
+                        <span>Est. Total</span>
+                        <strong id="summary-total-price">$0.00</strong>
+                      </div>
+                      <a class="cart-checkout" href="../contact-us">
+                        Submit Inquiry / Get Quote
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cart-empty" id="cart-empty-state">
+                <div class="cart-empty-icon">
+                  <i class="fas fa-shopping-basket"></i>
+                </div>
+                <h3>Your Inquiry List is Currently Empty</h3>
+                <p>
+                  You removed all demo items from the list. Refresh the page to
+                  restore the original 4 static products, or keep browsing to
+                  continue the mock flow.
+                </p>
+                <a href="./product-all.html" class="btn-checkout">
+                  <i class="fas fa-arrow-left"></i>
+                  Start Shopping Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/modernizr.custom.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/pages/cart.js"></script>
+    <script src="../js/shared/layout.js"></script>
+  </body>
+</html>

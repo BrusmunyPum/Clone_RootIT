@@ -1845,3 +1845,36 @@ footer {
         max-width: 1800px;
     }
 }
+
+/* Product detail page: keep the spec list compact until expanded. */
+#specContainer {
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    max-height: 460px;
+}
+
+#specContainer.expanded {
+    max-height: 2000px !important;
+}
+
+#toggleSpecBtn:hover {
+    color: #0132A1 !important;
+    text-decoration: underline !important;
+    transform: scale(1.05) !important;
+}
+
+#specContainer:not(.expanded)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.3));
+    pointer-events: none;
+}
+
+#specContainer.expanded::after {
+    opacity: 0;
+}
