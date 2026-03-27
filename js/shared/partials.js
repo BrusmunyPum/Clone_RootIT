@@ -5,6 +5,8 @@ window.RootITPartials = window.RootITPartials || {};
   var scriptUrl = currentScript
     ? new URL(currentScript.getAttribute("src"), window.location.href)
     : new URL("./js/shared/partials.js", window.location.href);
+  // Resolve the partial directory from the script location so pages in
+  // different folders can share the same loader.
   var siteRootUrl = new URL("../../", scriptUrl);
   var partialsBaseUrl = new URL("partials/", siteRootUrl);
 
@@ -69,6 +71,7 @@ window.RootITPartials = window.RootITPartials || {};
   }
 
   function loadSharedPartials() {
+    // Header and footer are loaded independently so one failure does not block both.
     return Promise.all([
       loadPartial("#site-header", "header.html"),
       loadPartial("#site-footer", "footer.html"),

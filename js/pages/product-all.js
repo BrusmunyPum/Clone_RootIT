@@ -33,12 +33,15 @@
       window.RootITProductCatalog &&
       Array.isArray(window.RootITProductCatalog.products)
     ) {
+      // Normalize the raw catalog data into one shape the renderer can use.
       return window.RootITProductCatalog.products.map(function (product, index) {
         var category = product.category || "Accessories";
         var brand = product.brand || "RootIT";
         return {
           id: product.id || "product-" + (index + 1),
-          href: product.href || "#",
+          // Temporary frontend behavior: route every catalog card to the
+          // single static detail page until the backend/Next.js detail flow exists.
+          href: "./product-detail.html",
           image: product.image,
           title: product.title || "Product",
           shortTitle: product.shortTitle || product.title || "Product",
@@ -279,6 +282,7 @@
   }
 
   function renderCatalog() {
+    // Rebuild the visible product grid from the current filter/sort/page state.
     var filteredProducts = getFilteredProducts();
     var totalPages = Math.max(
       1,

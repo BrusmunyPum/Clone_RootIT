@@ -669,6 +669,11 @@ body {
     visibility: visible;
 }
 
+.productSwiper .swiper-button-next.is-busy,
+.productSwiper .swiper-button-prev.is-busy {
+    pointer-events: none;
+}
+
 .swiper-button-next::after, .swiper-button-prev::after {
     font-size: 16px !important;
     font-weight: bold;

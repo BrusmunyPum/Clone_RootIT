@@ -22,6 +22,14 @@
   }
 
   function renderProductCard(product, badgeLabel) {
+    var productHref =
+      window.RootITProductDirectory &&
+      typeof window.RootITProductDirectory.buildListingHref === "function"
+        ? window.RootITProductDirectory.buildListingHref(product, {
+            basePath: "./product-details.html",
+          })
+        : product.href;
+
     var badgeMarkup = badgeLabel
       ? '<div class="pro_best_selling"><span>' +
         safeValue(badgeLabel) +
@@ -33,7 +41,7 @@
       '  <div class="pro_box">',
       badgeMarkup,
       '    <div class="pro_img">',
-      '      <a href="' + safeValue(product.href) + '">',
+      '      <a href="' + safeValue(productHref) + '">',
       '        <img src="' +
         safeValue(product.image) +
         '" width="230" height="210" alt="' +
@@ -43,7 +51,7 @@
       "    </div>",
       '    <div class="pro_title">',
       '      <h3><a href="' +
-        safeValue(product.href) +
+        safeValue(productHref) +
         '">' +
         safeValue(product.title) +
         "</a></h3>",
