@@ -209,7 +209,7 @@
 
   function buildDetailUrl(product, basePath) {
     var normalized = normalizeProduct(product || {}, "runtime");
-    var target = basePath || "./product-details.html";
+    var target = basePath || "./product-detail.html";
     return target + "?product=" + encodeURIComponent(normalized.slug);
   }
 

@@ -35,16 +35,18 @@
 
     new Swiper("#service-work-slider", {
       slidesPerView: 1,
-      spaceBetween: 22,
+      spaceBetween: 20,
+      loop: true,
+      speed: 650,
       navigation: {
         nextEl: "#work-next",
         prevEl: "#work-prev",
       },
       breakpoints: {
-        480: { slidesPerView: 1.2, spaceBetween: 16 },
+        480: { slidesPerView: 1.15, spaceBetween: 16 },
         768: { slidesPerView: 2, spaceBetween: 18 },
         992: { slidesPerView: 3, spaceBetween: 20 },
-        1200: { slidesPerView: 4, spaceBetween: 22 },
+        1200: { slidesPerView: 4, spaceBetween: 20 },
       },
     });
   }

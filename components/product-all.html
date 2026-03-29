@@ -68,18 +68,13 @@
     <link rel="preconnect" href="https://www.googletagmanager.com/" />
     <link rel="preconnect" href="https://www.google-analytics.com/" />
 
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/all.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/nav.css" />
     <link rel="stylesheet" type="text/css" href="../css/nav-desk.css" />
     <link rel="stylesheet" type="text/css" href="../css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index-page.css" />
     <link rel="stylesheet" type="text/css" href="../css/pagination.css" />
     <link rel="preload" href="../partials/header.html" as="fetch" />
     <link rel="preload" href="../partials/footer.html" as="fetch" />
@@ -98,10 +93,15 @@
         padding-right: 10px;
       }
 
+      .products-mobile-bar {
+        display: none;
+      }
+
       .filter-wrapper-box {
         overflow: hidden;
         margin-bottom: 25px;
         width: 100%;
+        background: #fff;
       }
 
       .filter-header-cus {
@@ -146,12 +146,42 @@
         padding-bottom: 10px;
       }
 
+      .filter-box:last-child {
+        margin-bottom: 0;
+      }
+
       .filter-title {
         font-size: 14px;
         font-weight: 600;
         color: #3c4643;
         margin: 12px 0;
         letter-spacing: 0.5px;
+      }
+
+      .filter-toggle {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 8px 0;
+        border: none;
+        background: transparent;
+        color: #3c4643;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-align: left;
+      }
+
+      .filter-toggle i:last-child {
+        color: #0132a1;
+        font-size: 12px;
+        transition: transform 0.2s ease;
+      }
+
+      .filter-box.is-open .filter-toggle i:last-child {
+        transform: rotate(180deg);
       }
 
       .brand-scroll {
@@ -385,15 +415,173 @@
       }
 
       @media (max-width: 991px) {
-        .products-sidebar,
+        .products-page {
+          padding-bottom: 18px;
+        }
+
         .products-main {
           padding-left: 15px;
           padding-right: 15px;
         }
 
+        .products-mobile-bar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          margin-bottom: 14px;
+        }
+
+        .products-mobile-btn {
+          flex: 1 1 0;
+          height: 44px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          border: 1px solid #d9e1ef;
+          border-radius: 12px;
+          background: #fff;
+          color: #16326d;
+          font-size: 14px;
+          font-weight: 600;
+          box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+        }
+
+        .products-sidebar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: min(88vw, 360px);
+          height: 100vh;
+          padding: 0;
+          background: #fff;
+          z-index: 100070;
+          box-shadow: 18px 0 40px rgba(15, 23, 42, 0.16);
+          transform: translateX(-100%);
+          transition: transform 0.25s ease;
+        }
+
+        body.products-filters-open .products-sidebar {
+          transform: translateX(0);
+        }
+
+        .products-filter-overlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(15, 23, 42, 0.34);
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.25s ease, visibility 0.25s ease;
+          z-index: 100060;
+        }
+
+        body.products-filters-open .products-filter-overlay {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        body.products-filters-open {
+          overflow: hidden;
+        }
+
+        .filter-wrapper-box {
+          height: 100%;
+          margin-bottom: 0;
+          display: flex;
+          flex-direction: column;
+          padding: 0 16px 20px;
+        }
+
+        .filter-header-cus {
+          position: sticky;
+          top: 0;
+          z-index: 2;
+          background: #fff;
+          padding: 16px 0 14px !important;
+        }
+
+        .filter-header-row {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          gap: 16px;
+        }
+
+        .filter-close-btn {
+          width: 40px;
+          height: 40px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #d9e1ef;
+          border-radius: 12px;
+          background: #fff;
+          color: #0132a1;
+          box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+        }
+
+        .sidebar-filter {
+          flex: 1 1 auto;
+          overflow-y: auto;
+          padding: 10px 0 0;
+        }
+
+        .filter-box .brand-scroll {
+          display: none;
+          max-height: 280px;
+        }
+
+        .filter-box.is-open .brand-scroll {
+          display: block;
+        }
+
         .results-bar {
           flex-direction: column;
           align-items: flex-start;
+          gap: 12px;
+          margin-bottom: 18px;
+        }
+
+        .sort-wrapper {
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .sort-select {
+          flex: 1 1 auto;
+          min-width: 0;
+          height: 42px;
+          border-radius: 12px;
+          padding-left: 14px;
+        }
+
+        .product-card-col {
+          margin-bottom: 22px;
+        }
+
+        .catalog-product-image {
+          height: 120px;
+        }
+
+        .catalog-product-image img {
+          max-height: 120px;
+        }
+
+        .catalog-product-title {
+          width: 100%;
+        }
+
+        .catalog-product-title h3 {
+          height: 48px;
+        }
+
+        .catalog-product-title h3 a {
+          font-size: 12px;
+        }
+
+        .catalog-product-price span {
+          font-size: 15px;
         }
       }
     </style>
@@ -406,7 +594,7 @@
       <div class="breadcrumb_cus">
         <div class="container-fluid">
           <ol class="breadcrumb">
-            <li><a href="/"></a></li>
+            <li><a href="../index.html"></a></li>
             <li class="active">IT Products &amp; Inquiries</li>
           </ol>
         </div>
@@ -414,27 +602,56 @@
 
       <div class="content_wrapper products-page">
         <div class="container-fluid">
+          <div class="products-filter-overlay" data-products-filter-close></div>
           <div class="row">
-            <div class="col-md-2 col-sm-3 hidden-xs products-sidebar">
+            <div class="col-lg-3 col-md-4 products-sidebar">
               <div class="filter-wrapper-box">
                 <div class="filter-header-cus">
-                  <h2>
-                    <i class="fa-solid fa-sliders icon-blue"></i>
-                    Smart Selection
-                  </h2>
-                  <p class="filter-sub-text">
-                    Select options to find your perfect match.
-                  </p>
+                  <div class="filter-header-row">
+                    <div>
+                      <h2>
+                        <i class="fa-solid fa-sliders icon-blue"></i>
+                        Smart Selection
+                      </h2>
+                      <p class="filter-sub-text">
+                        Select options to find your perfect match.
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      class="filter-close-btn d-inline-flex d-md-none"
+                      data-products-filter-close
+                      aria-label="Close filters"
+                    >
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
                 </div>
 
                 <div class="sidebar-filter">
-                  <div class="filter-box">
-                    <h4 class="filter-title">Category</h4>
+                  <div class="filter-box is-open" data-filter-section>
+                    <button
+                      type="button"
+                      class="filter-toggle"
+                      data-filter-toggle
+                      aria-expanded="true"
+                    >
+                      <span class="filter-title">Category</span>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
                     <div class="brand-scroll" id="category-filter-list"></div>
                   </div>
 
-                  <div class="filter-box">
-                    <h4 class="filter-title">Brand</h4>
+                  <div class="filter-box is-open" data-filter-section>
+                    <button
+                      type="button"
+                      class="filter-toggle"
+                      data-filter-toggle
+                      aria-expanded="true"
+                    >
+                      <span class="filter-title">Brand</span>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
                     <div class="brand-scroll" id="brand-filter-list"></div>
                   </div>
 
@@ -450,7 +667,17 @@
               </div>
             </div>
 
-            <div class="col-md-10 col-sm-9 products-main">
+            <div class="col-lg-9 col-md-8 col-12 products-main">
+              <div class="products-mobile-bar d-flex d-md-none">
+                <button
+                  type="button"
+                  class="products-mobile-btn"
+                  data-products-filter-open
+                >
+                  <i class="fa-solid fa-sliders"></i>
+                  Filters
+                </button>
+              </div>
               <div class="results-bar">
                 <div id="results-text-display">Loading all products...</div>
                 <div class="sort-wrapper">
@@ -465,7 +692,7 @@
 
               <div id="filter-result">
                 <div class="products-loading">
-                  <i class="fa fa-spinner fa-spin fa-3x"></i>
+                  <i class="fa-solid fa-spinner fa-spin fa-3x" aria-hidden="true"></i>
                   <div>Loading all products...</div>
                 </div>
               </div>
@@ -477,21 +704,13 @@
 
     <div id="site-footer"></div>
 
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/modernizr.custom.js"></script>
-    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.js"></script>
     <script src="../js/pages/product-all.js"></script>
     <script src="../js/shared/layout.js"></script>
-    <script>
-      $(document).ready(function () {
-        if (
-          window.RootITPage &&
-          typeof window.RootITPage.initProductAll === "function"
-        ) {
-          window.RootITPage.initProductAll();
-        }
-      });
-    </script>
+    <script>document.addEventListener("DOMContentLoaded", function () { if (window.RootITPage && typeof window.RootITPage.initProductAll === "function") { window.RootITPage.initProductAll(); } });</script>
   </body>
 </html>
+
+
+

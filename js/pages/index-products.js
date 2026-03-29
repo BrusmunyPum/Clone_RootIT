@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   window.RootITPage = window.RootITPage || {};
 
   var htmlDecoder = document.createElement("textarea");
@@ -106,6 +106,13 @@
     mountNode.innerHTML = data.productSections
       .map(renderProductSection)
       .join("");
+
+    if (
+      window.RootITPartials &&
+      typeof window.RootITPartials.rewriteLocalSiteUrls === "function"
+    ) {
+      window.RootITPartials.rewriteLocalSiteUrls(mountNode);
+    }
 
     if (
       window.RootITAssets &&

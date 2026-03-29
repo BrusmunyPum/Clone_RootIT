@@ -147,7 +147,7 @@
 
   function renderProductCard(product) {
     return [
-      '<div class="product-card-col col-md-3 col-sm-6 col-xs-6">',
+      '<div class="product-card-col col-lg-3 col-md-6 col-sm-6 col-6">',
       '  <div class="catalog-product-card">',
       '    <div class="catalog-product-image">',
       '      <a href="' + safeValue(product.href) + '">',
@@ -359,6 +359,8 @@
   function bindEvents() {
     var sortSelect = document.getElementById("sort_by");
     var clearButton = document.getElementById("clear-filters-btn");
+    var filterOpenButtons = document.querySelectorAll("[data-products-filter-open]");
+    var filterCloseButtons = document.querySelectorAll("[data-products-filter-close]");
 
     sortSelect.value = state.sort;
 
@@ -375,6 +377,7 @@
       state.sort = "newest";
       state.page = 1;
       sortSelect.value = "newest";
+      document.body.classList.remove("products-filters-open");
       renderCatalog();
     });
 
@@ -384,17 +387,45 @@
       if (target.matches("[data-filter-type='category']")) {
         state.category = target.checked ? target.getAttribute("data-filter-value") : "all";
         state.page = 1;
+        if (window.innerWidth <= 991) {
+          document.body.classList.remove("products-filters-open");
+        }
         renderCatalog();
       }
 
       if (target.matches("[data-filter-type='brand']")) {
         state.brand = target.checked ? target.getAttribute("data-filter-value") : "all";
         state.page = 1;
+        if (window.innerWidth <= 991) {
+          document.body.classList.remove("products-filters-open");
+        }
         renderCatalog();
       }
     });
 
     document.addEventListener("click", function (event) {
+      var filterOpenButton = event.target.closest("[data-products-filter-open]");
+      if (filterOpenButton) {
+        document.body.classList.add("products-filters-open");
+        return;
+      }
+
+      var filterCloseButton = event.target.closest("[data-products-filter-close]");
+      if (filterCloseButton) {
+        document.body.classList.remove("products-filters-open");
+        return;
+      }
+
+      var filterToggle = event.target.closest("[data-filter-toggle]");
+      if (filterToggle) {
+        var filterSection = filterToggle.closest("[data-filter-section]");
+        if (filterSection && window.innerWidth <= 991) {
+          var isOpen = filterSection.classList.toggle("is-open");
+          filterToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        }
+        return;
+      }
+
       var button = event.target.closest("[data-page]");
       if (!button) {
         return;
@@ -406,6 +437,24 @@
         renderCatalog();
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        document.body.classList.remove("products-filters-open");
+      }
+    });
+
+    Array.prototype.forEach.call(filterOpenButtons, function (button) {
+      button.addEventListener("click", function () {
+        document.body.classList.add("products-filters-open");
+      });
+    });
+
+    Array.prototype.forEach.call(filterCloseButtons, function (button) {
+      button.addEventListener("click", function () {
+        document.body.classList.remove("products-filters-open");
+      });
     });
   }
 

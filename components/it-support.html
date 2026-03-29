@@ -14,8 +14,8 @@
           w[l].push(arguments);
         })("set", "developer_id.dYzg1YT", true);
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s);
+        var f = d.getElementsByTagName(s)[0];
+        var j = d.createElement(s);
         j.async = true;
         j.src = "/l99x/";
         f.parentNode.insertBefore(j, f);
@@ -25,66 +25,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow" />
-
-    <title>IT Support &amp; Maintenance in Phnom Penh</title>
+    <title>IT Support & Solutions | Root IT Support</title>
     <meta
       name="description"
-      content="We offer comprehensive IT solutions for businesses in Phnom Penh, including on-site IT support, proactive computer maintenance, networking, surveillance, and access control."
+      content="Review modernized IT support offerings including managed support, security systems, structured networking, and access control."
     />
-    <meta
-      name="keywords"
-      content="IT services Phnom Penh, IT support Cambodia, computer maintenance, network solutions, security camera systems, access control systems"
-    />
-    <link rel="canonical" href="https://rootitsupport.com/service/it-support" />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Root IT Support" />
-    <meta property="og:title" content="IT Support &amp; Maintenance in Phnom Penh" />
-    <meta
-      property="og:description"
-      content="We offer comprehensive IT solutions for businesses in Phnom Penh, including on-site IT support, proactive computer maintenance, networking, surveillance, and access control."
-    />
-    <meta property="og:url" content="https://rootitsupport.com/service/it-support" />
-    <meta
-      property="og:image"
-      content="https://rootitsupport.com/userfiles/IT_support_solutions/camera-hikvision-10(1).jpg"
-    />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="IT Support &amp; Maintenance in Phnom Penh" />
-    <meta
-      name="twitter:description"
-      content="We offer comprehensive IT solutions for businesses in Phnom Penh, including on-site IT support, proactive computer maintenance, networking, surveillance, and access control."
-    />
-    <meta
-      name="twitter:image"
-      content="https://rootitsupport.com/userfiles/IT_support_solutions/camera-hikvision-10(1).jpg"
-    />
-
-    <link
-      rel="shortcut icon"
-      href="https://rootitsupport.com/favicon.ico"
-      type="image/x-icon"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://rootitsupport.com/favicon.png"
-      sizes="48x48"
-    />
-    <link rel="preconnect" href="https://www.googletagmanager.com/" />
-    <link rel="preconnect" href="https://www.google-analytics.com/" />
-
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="canonical" href="./it-support.html" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net/" crossorigin />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="../css/nav.css" />
     <link rel="stylesheet" type="text/css" href="../css/nav-desk.css" />
     <link rel="stylesheet" type="text/css" href="../css/custom.css" />
@@ -92,52 +53,40 @@
     <link rel="preload" href="../partials/header.html" as="fetch" />
     <link rel="preload" href="../partials/footer.html" as="fetch" />
     <script src="../js/shared/partials.js"></script>
-
     <style>
-      .service-page {
-        padding: 34px 0 58px;
-      }
-
-      .service-gallery .swiper-slide img {
-        width: 100%;
-        height: 460px;
-        object-fit: cover;
-        border-radius: 2px;
+      body {
         background: #fff;
       }
 
-      .service-gallery {
-        position: relative;
+      .service-page {
+        padding: 20px 0 40px;
       }
 
-      .service-gallery .swiper-button-next,
-      .service-gallery .swiper-button-prev {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.96);
-        box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
-        color: #0132a1;
+      .service-shell {
+        padding: 16px 0 0;
       }
 
-      .service-gallery .swiper-button-next::after,
-      .service-gallery .swiper-button-prev::after {
-        font-size: 18px;
-        font-weight: 700;
+      .service-gallery-main img {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+        border: 1px solid #efefef;
       }
 
       .service-thumbs {
-        margin-top: 12px;
-        padding: 0 92px;
+        margin-top: 14px;
+        max-width: 390px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .service-thumbs .swiper-slide {
-        opacity: 0.55;
+        border: 1px solid #dcdcdc;
+        overflow: hidden;
         cursor: pointer;
-        transition: opacity 0.25s ease;
-        border: 1px solid #e5ebf3;
-        padding: 4px;
+        opacity: 0.85;
         background: #fff;
+        transition: opacity 0.2s ease, border-color 0.2s ease;
       }
 
       .service-thumbs .swiper-slide-thumb-active,
@@ -146,360 +95,342 @@
         border-color: #0132a1;
       }
 
-      .service-thumbs .swiper-slide img {
+      .service-thumbs img {
         width: 100%;
-        height: 82px;
+        height: 72px;
         object-fit: cover;
-        border-radius: 2px;
       }
 
-      .service-title-full-border {
+      .service-body h2 {
+        margin: 0 0 12px;
+        color: #2d3f50;
         font-size: 24px;
         font-weight: 500;
-        border-bottom: 2px solid #0132a1;
-        padding-bottom: 10px;
-        margin: 8px 0 16px;
-        color: #3c4643 !important;
+        border-bottom: 2px solid #0b46c5;
+        padding-bottom: 6px;
+        display: inline-block;
       }
 
-      .detail-content {
+      .service-body p,
+      .service-body li {
+        color: #2f3f4d;
+        line-height: 1.85;
         font-size: 15px;
-        line-height: 1.72;
-        color: #444;
       }
 
-      .detail-content p,
-      .detail-content ul {
-        margin-bottom: 15px;
-      }
-
-      .detail-content ul {
+      .service-body ul {
         padding-left: 18px;
+        margin: 18px 0 0;
       }
 
-      .detail-content li {
-        margin-bottom: 8px;
+      .service-sidebar-card {
+        padding: 0;
+        height: auto;
+        background: #fff;
+        box-shadow: none;
+        border-radius: 0;
       }
 
-      .detail-content strong {
-        color: #1e293b;
+      .service-sidebar-card h3 {
+        margin: 0 0 14px;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 12px 16px;
+        border-bottom: 2px solid #0b46c5;
+        background: #f7f7f7;
       }
 
-      .sidebar-title {
-        font-size: 18px;
-        font-weight: 500;
-        color: #3c4643;
-        margin: 6px 0 18px;
-        padding: 13px 20px;
-        background: #f3f7fb;
-        border-left: 5px solid #0132a1;
-      }
-
-      .related-service-link {
+      .service-sidebar-link {
         display: flex;
         align-items: center;
-        padding: 14px 0;
-        background: #fff;
-        border-radius: 0;
-        border-bottom: 1px solid #e2e8f0;
-        text-decoration: none !important;
-        margin-bottom: 0;
-        transition: 0.3s;
+        gap: 16px;
+        padding: 18px 16px;
+        color: #1f2937;
+        text-decoration: none;
+        border-bottom: 1px solid #ececec;
+        transition: color 0.2s ease, background 0.2s ease;
       }
 
-      .related-service-link:hover {
-        background: transparent;
-        border-bottom-color: #cbd5e1;
+      .service-sidebar-link:hover {
+        color: #0132a1;
+        background: #fafafa;
       }
 
-      .icon-box {
-        flex: 0 0 45px;
-        height: 45px;
-        background: #f4f7fb;
-        display: flex;
+      .service-sidebar-link i {
+        width: 34px;
+        height: 34px;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
-        border-radius: 2px;
-        margin: 0 18px 0 14px;
-        transition: 0.3s;
+        background: #f4f6fb;
+        color: #0b46c5;
       }
 
-      .related-service-link i {
-        font-size: 18px;
-        color: #0132a1;
+      .service-work-section {
+        margin-top: 42px;
+        padding: 4px 6px 18px;
       }
 
-      .related-service-link:hover .icon-box {
-        background: #e8f0ff;
+      .service-work-section h2 {
+        margin: 0 0 4px;
+        color: #2d3f50;
+        font-size: 28px;
+        font-weight: 600;
       }
 
-      .related-service-link:hover .icon-box i {
-        color: #0132a1;
-      }
-
-      .related-service-link h3 {
-        font-size: 14px;
-        font-weight: 500;
-        color: #1e293b;
-        margin: 0;
-        transition: 0.3s;
-        line-height: 1.45;
-      }
-
-      .related-service-link:hover h3 {
-        color: #0132a1 !important;
-      }
-
-      .work-section {
-        margin-top: 74px;
-        position: relative;
-      }
-
-      .work-header {
-        margin-bottom: 30px;
-      }
-
-      .work-header h2 {
-        margin: 0;
-        font-size: 24px;
-        color: #3c4643;
-        font-weight: 500;
-      }
-
-      .work-header p {
-        margin: 10px 0 0;
-        color: #3c4643;
+      .service-work-subtitle {
+        margin: 0 0 28px;
+        color: #2f3f4d;
         font-size: 15px;
       }
 
-      .work-nav {
-        position: absolute;
-        left: -26px;
-        right: -26px;
-        top: 198px;
-        pointer-events: none;
-      }
-
-      #work-next,
-      #work-prev {
-        position: absolute;
-        margin: 0;
-        background: #0132a1;
-        width: 40px;
-        height: 40px;
-        border-radius: 2px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        color: #fff !important;
-        pointer-events: auto;
-      }
-
-      #work-prev {
-        left: 0;
-      }
-
-      #work-next {
-        right: 0;
-      }
-
-      #work-next::after,
-      #work-prev::after {
-        font-size: 14px;
-        font-weight: 700;
-      }
-
-      #work-next:hover,
-      #work-prev:hover {
-        background: #000;
-      }
-
-      .work-card-clean {
+      .service-work-card {
+        overflow: hidden;
+        height: 100%;
+        border: 1px solid #dfe5ec;
+        border-radius: 0;
+        box-shadow: none;
         background: #fff;
-        border-radius: 2px;
-        overflow: hidden;
-        text-align: center;
-        padding-bottom: 16px;
-        border: 1px solid #e2e8f0;
-        height: 100%;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
       }
 
-      .work-img-wrapper {
-        overflow: hidden;
-        height: 300px;
-      }
-
-      .work-img-wrapper img {
+      .service-work-card img {
         width: 100%;
-        height: 100%;
+        height: 250px;
         object-fit: cover;
-        transition: 0.3s;
+        transition: transform 0.35s ease;
       }
 
-      .work-card-clean:hover img {
-        transform: scale(1.08);
+      .service-work-card-body {
+        padding: 14px 10px 18px;
+        text-align: center;
+        min-height: 84px;
       }
 
-      .work-card-clean h3 {
-        font-size: 14px;
-        font-weight: 400;
-        padding: 13px 16px 0;
-        color: #1e293b;
+      .service-work-card-body h3 {
         margin: 0;
-        line-height: 1.55;
+        font-size: 14px;
+        line-height: 1.32;
+        font-weight: 400;
+        color: #2f3f4d;
       }
 
-      .work-card-clean a {
-        color: inherit;
-        text-decoration: none;
+      .service-work-card-body p {
+        display: none;
       }
 
-      .work-card-clean a:hover {
-        color: #0132a1;
+      .service-work-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.1);
+        border-color: #cfd8e3;
       }
 
-      @media (max-width: 991px) {
-        .service-gallery {
-          margin-bottom: 26px;
+      .service-work-card:hover img {
+        transform: scale(1.025);
+      }
+
+      .breadcrumb_cus {
+        margin-bottom: 22px;
+      }
+
+      .service-gallery-main .swiper-button-next,
+      .service-gallery-main .swiper-button-prev {
+        width: 50px;
+        height: 50px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.96);
+        border: 1px solid rgba(11, 70, 197, 0.14);
+        color: #0b46c5;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.14);
+        top: 50%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-50%) scale(0.9);
+        transition: opacity 0.22s ease, transform 0.22s ease, background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+      }
+
+      .service-gallery-main .swiper-button-next::after,
+      .service-gallery-main .swiper-button-prev::after {
+        width: 12px;
+        height: 12px;
+        border-right-width: 2.5px;
+        border-bottom-width: 2.5px;
+        font-size: 0;
+      }
+
+      .service-gallery-main .swiper-button-prev {
+        left: 16px;
+      }
+
+      .service-gallery-main .swiper-button-next {
+        right: 16px;
+      }
+
+      .service-gallery-main:hover .swiper-button-next,
+      .service-gallery-main:hover .swiper-button-prev {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-50%) scale(1);
+      }
+
+      .service-gallery-main .swiper-button-next:hover,
+      .service-gallery-main .swiper-button-prev:hover {
+        background: #0b46c5;
+        color: #fff;
+        border-color: #0b46c5;
+        box-shadow: 0 14px 30px rgba(11, 70, 197, 0.2);
+        transform: translateY(-50%) scale(1.03);
+      }
+
+      .service-work-nav {
+        position: relative;
+        padding: 0 2px;
+      }
+
+      .service-work-nav .swiper-button-next,
+      .service-work-nav .swiper-button-prev {
+        width: 46px;
+        height: 46px;
+        background: rgba(255, 255, 255, 0.97);
+        color: #0b46c5;
+        border: 1px solid rgba(11, 70, 197, 0.14);
+        border-radius: 999px;
+        box-shadow: 0 10px 26px rgba(15, 23, 42, 0.12);
+        transition: transform 0.2s ease, background 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        top: 43%;
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+      }
+
+      .service-work-nav .swiper-button-prev {
+        left: -18px;
+      }
+
+      .service-work-nav .swiper-button-next {
+        right: -18px;
+      }
+
+      .service-work-nav .swiper-button-next::after,
+      .service-work-nav .swiper-button-prev::after {
+        width: 13px;
+        height: 13px;
+        border-right-width: 2.5px;
+        border-bottom-width: 2.5px;
+        font-size: 0;
+      }
+
+      .service-work-nav .swiper-button-next:hover,
+      .service-work-nav .swiper-button-prev:hover {
+        background: #0b46c5;
+        color: #fff;
+        border-color: #0b46c5;
+        box-shadow: 0 14px 30px rgba(11, 70, 197, 0.2);
+        transform: scale(1.03);
+      }
+
+      .service-work-nav .swiper-button-disabled {
+        opacity: 0.55;
+      }
+
+      .service-work-nav .swiper-slide {
+        height: auto;
+      }
+
+      @media (max-width: 1199px) {
+        .service-work-card img {
+          height: 230px;
         }
 
-        .sidebar-title {
-          margin-top: 24px;
+        .service-work-nav .swiper-button-prev {
+          left: -10px;
         }
 
-        .work-nav {
-          position: static;
-          margin-top: 14px;
-          display: flex;
-          gap: 10px;
-          justify-content: flex-end;
-        }
-
-        #work-next,
-        #work-prev {
-          position: static;
+        .service-work-nav .swiper-button-next {
+          right: -10px;
         }
       }
 
       @media (max-width: 767px) {
-        .service-page {
-          padding-top: 22px;
+        .service-work-section {
+          padding-left: 0;
+          padding-right: 0;
         }
 
-        .service-title-full-border {
-          margin-top: 0;
+        .service-work-section h2 {
+          font-size: 24px;
         }
 
-        .service-gallery .swiper-slide img {
-          height: 280px;
-        }
-
-        .service-thumbs .swiper-slide img {
-          height: 72px;
-        }
-
-        .service-thumbs {
-          padding: 0;
-        }
-
-        .work-header {
-          margin-bottom: 18px;
-        }
-
-        .work-img-wrapper {
+        .service-work-card img {
           height: 220px;
+        }
+
+        .service-work-nav .swiper-button-next,
+        .service-work-nav .swiper-button-prev {
+          width: 40px;
+          height: 40px;
         }
       }
     </style>
   </head>
-
   <body>
     <div id="site-header"></div>
 
-    <main>
-      <div class="breadcrumb_cus">
-        <div class="container-fluid">
+    <main class="service-page">
+      <div class="container-fluid">
+        <div class="breadcrumb_cus">
           <ol class="breadcrumb">
-            <li><a href="/">Home</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="../index.html"></a></li>
+            <li><a href="./portfolio.html">Services</a></li>
             <li class="active">IT Support and Solutions</li>
           </ol>
         </div>
-      </div>
 
-      <div class="content_wrapper service-page">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-5 col-sm-12">
-              <div class="swiper service-gallery" id="service-gallery">
+        <section class="service-shell">
+          <div class="row g-4">
+            <div class="col-lg-5">
+              <div class="swiper service-gallery-main" id="service-gallery">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img
-                      src="../userfiles/IT_support_solutions/pictures-service-computer.02.png"
-                      alt="IT support onsite support service"
-                    />
+                    <img src="../userfiles/IT_support_solutions/camera-hikvision-10(1).jpg" alt="Camera and security deployment" />
                   </div>
                   <div class="swiper-slide">
-                    <img
-                      src="../userfiles/IT_support_solutions/fingerprint-01(1).jpg"
-                      alt="IT support attendance solution"
-                    />
+                    <img src="../userfiles/IT_support_solutions/pictures-service-computer.02.png" alt="Managed computer support" />
                   </div>
                   <div class="swiper-slide">
-                    <img
-                      src="../userfiles/IT_support_solutions/fingerprint-02(1).jpg"
-                      alt="IT support fingerprint access solution"
-                    />
+                    <img src="../userfiles/services/install-network-09.jpg" alt="Networking rollout" />
                   </div>
                   <div class="swiper-slide">
-                    <img
-                      src="../userfiles/IT_support_solutions/camera-hikvision-10(1).jpg"
-                      alt="IT support surveillance system solution"
-                    />
+                    <img src="../userfiles/IT_support_solutions/pictures-sevice-19(1).png" alt="Access control installation" />
                   </div>
                 </div>
-                <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
               </div>
 
               <div class="swiper service-thumbs" id="service-thumbs">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img
-                      src="../userfiles/IT_support_solutions/pictures-service-computer.02.png"
-                      alt="Service thumb 1"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="../userfiles/IT_support_solutions/fingerprint-01(1).jpg"
-                      alt="Service thumb 2"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="../userfiles/IT_support_solutions/fingerprint-02(1).jpg"
-                      alt="Service thumb 3"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="../userfiles/IT_support_solutions/camera-hikvision-10(1).jpg"
-                      alt="Service thumb 4"
-                    />
-                  </div>
+                  <div class="swiper-slide"><img src="../userfiles/IT_support_solutions/camera-hikvision-10(1).jpg" alt="Security thumbnail" /></div>
+                  <div class="swiper-slide"><img src="../userfiles/IT_support_solutions/pictures-service-computer.02.png" alt="Support thumbnail" /></div>
+                  <div class="swiper-slide"><img src="../userfiles/services/install-network-09.jpg" alt="Network thumbnail" /></div>
+                  <div class="swiper-slide"><img src="../userfiles/IT_support_solutions/pictures-sevice-19(1).png" alt="Access control thumbnail" /></div>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-4 col-sm-12">
-              <h1 class="service-title-full-border">IT Support and Solutions</h1>
-              <div class="detail-content">
+            <div class="col-lg-4">
+              <div class="service-body">
+                <h2>IT Support and Solutions</h2>
                 <p>
-                  Root IT Support is your one-stop solution for professional
-                  on-site IT services in Phnom Penh. Our expertise covers
-                  everything from proactive computer maintenance and network
-                  solutions to security camera systems and access control. We
-                  provide the right-sized, competitively priced IT resources to
-                  keep your business running smoothly.
+                  Root IT Support is your one-stop solution for professional on-site IT
+                  services in Phnom Penh. Our expertise covers everything from
+                  proactive computer maintenance and network solutions to security
+                  camera systems and access control. We provide the right-sized,
+                  competitively priced IT resources to keep your business running
+                  smoothly.
                 </p>
                 <p><strong>Allowing you to do more</strong></p>
                 <ul>
@@ -514,298 +445,87 @@
               </div>
             </div>
 
-            <div class="col-md-3 col-sm-12">
-              <h2 class="sidebar-title">Related Services</h2>
-
-              <a href="../service/it-support" class="related-service-link">
-                <div class="icon-box">
-                  <i class="fa-solid fa-user-gear"></i>
-                </div>
-                <div><h3>IT Support and Solutions</h3></div>
-              </a>
-
-              <a href="../service/time-attendance" class="related-service-link">
-                <div class="icon-box">
+            <div class="col-lg-3">
+              <aside class="service-sidebar-card">
+                <h3>Related Services</h3>
+                <a class="service-sidebar-link" href="./it-support.html">
+                  <i class="fa-solid fa-users-gear"></i>
+                  <span>IT Support and Solutions</span>
+                </a>
+                <a class="service-sidebar-link" href="./contact-me.html?subject=Time%20and%20Attendance">
                   <i class="fa-solid fa-fingerprint"></i>
-                </div>
-                <div><h3>Time and Attendance</h3></div>
-              </a>
-
-              <a href="../service/camera-surveillance" class="related-service-link">
-                <div class="icon-box">
+                  <span>Time and Attendance</span>
+                </a>
+                <a class="service-sidebar-link" href="./contact-me.html?subject=Security%20Camera%20Systems">
                   <i class="fa-solid fa-video"></i>
-                </div>
-                <div><h3>Security Camera Systems</h3></div>
-              </a>
-
-              <a href="../service/door-access" class="related-service-link">
-                <div class="icon-box">
-                  <i class="fa-solid fa-id-card-clip"></i>
-                </div>
-                <div><h3>Access Control Systems</h3></div>
-              </a>
-
-              <a href="../service/network-solutions" class="related-service-link">
-                <div class="icon-box">
+                  <span>Security Camera Systems</span>
+                </a>
+                <a class="service-sidebar-link" href="./contact-me.html?subject=Access%20Control%20Systems">
+                  <i class="fa-solid fa-id-badge"></i>
+                  <span>Access Control Systems</span>
+                </a>
+                <a class="service-sidebar-link" href="./contact-me.html?subject=Network%20Solutions">
                   <i class="fa-solid fa-network-wired"></i>
-                </div>
-                <div><h3>Network Solutions</h3></div>
-              </a>
+                  <span>Network Solutions</span>
+                </a>
+              </aside>
             </div>
           </div>
 
-          <div class="work-section">
-            <div class="work-header">
-              <h2>Our Work</h2>
-              <p>Showcasing our successful projects</p>
-              <div class="work-nav">
-                <div class="swiper-button-prev" id="work-prev"></div>
-                <div class="swiper-button-next" id="work-next"></div>
-              </div>
-            </div>
-
-            <div class="swiper productSlider" id="service-work-slider">
+          <section class="service-work-section">
+            <h2>Our Work</h2>
+            <p class="service-work-subtitle">Showcasing our successful projects</p>
+            <div class="swiper service-work-nav" id="service-work-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="work-card-clean">
-                    <div class="work-img-wrapper">
-                      <a href="../our-work/Install-Door-Access-System">
-                        <img
-                          src="../userfiles/IT_support_solutions/service-01.jpg"
-                          loading="lazy"
-                          alt="Door Access Control - Installation of Door Security System"
-                        />
-                      </a>
+                  <article class="service-work-card">
+                    <img src="../userfiles/IT_support_solutions/pictures-sevice-16.png" alt="Access control project" />
+                    <div class="service-work-card-body">
+                      <h3>Door Access Control - Installation of Door Security System</h3>
+                      <p>Secure office entry points with readers, locks, and centralized user management.</p>
                     </div>
-                    <h3>
-                      <a href="../our-work/Install-Door-Access-System">
-                        Door Access Control - Installation of Door Security System
-                      </a>
-                    </h3>
-                  </div>
+                  </article>
                 </div>
-
                 <div class="swiper-slide">
-                  <div class="work-card-clean">
-                    <div class="work-img-wrapper">
-                      <a href="../our-work/hongkong-smbc">
-                        <img
-                          src="../userfiles/IT_support_solutions/service-3.jpg"
-                          loading="lazy"
-                          alt="Sumitomo Mitsui Banking Corporation (SMBC) at HongKong Land"
-                        />
-                      </a>
+                  <article class="service-work-card">
+                    <img src="../userfiles/IT_support_solutions/service-01.jpg" alt="Server rack maintenance project" />
+                    <div class="service-work-card-body">
+                      <h3>Sumitomo Mitsui Banking Corporation (SMBC) at HongKong Land</h3>
+                      <p>Support HR teams with reliable attendance capture and workflow-friendly device deployment.</p>
                     </div>
-                    <h3>
-                      <a href="../our-work/hongkong-smbc">
-                        Sumitomo Mitsui Banking Corporation (SMBC) at HongKong Land
-                      </a>
-                    </h3>
-                  </div>
+                  </article>
                 </div>
-
                 <div class="swiper-slide">
-                  <div class="work-card-clean">
-                    <div class="work-img-wrapper">
-                      <a href="../our-work/Service-Computer-Maintenance">
-                        <img
-                          src="../userfiles/IT_support_solutions/pictures-service-computer.02.png"
-                          loading="lazy"
-                          alt="Monthly service, computer maintenance, and troubleshooting for software and hardware"
-                        />
-                      </a>
+                  <article class="service-work-card">
+                    <img src="../userfiles/IT_support_solutions/pictures-service-computer.02.png" alt="Monthly service maintenance project" />
+                    <div class="service-work-card-body">
+                      <h3>Monthly service, computer maintenance, and troubleshooting for software and hardware</h3>
+                      <p>Deploy camera systems with sensible coverage planning and network-aware recording architecture.</p>
                     </div>
-                    <h3>
-                      <a href="../our-work/Service-Computer-Maintenance">
-                        Monthly service, computer maintenance, and troubleshooting for software and hardware
-                      </a>
-                    </h3>
-                  </div>
+                  </article>
                 </div>
-
                 <div class="swiper-slide">
-                  <div class="work-card-clean">
-                    <div class="work-img-wrapper">
-                      <a href="../our-work/video-surveillance">
-                        <img
-                          src="../userfiles/IT_support_solutions/slide-09.png"
-                          loading="lazy"
-                          alt="Installation Camera Surveillance at Borey Grand Chroy Changva - Phnom Penh"
-                        />
-                      </a>
+                  <article class="service-work-card">
+                    <img src="../userfiles/services/camera-01.jpg" alt="Camera surveillance installation project" />
+                    <div class="service-work-card-body">
+                      <h3>Installation Camera Surveillance at Borey Grand Chroy Changva - Phnom Penh</h3>
+                      <p>Roll out structured WiFi and switching for consistent performance across meeting rooms and work zones.</p>
                     </div>
-                    <h3>
-                      <a href="../our-work/video-surveillance">
-                        Installation Camera Surveillance at Borey Grand Chroy Changva - Phnom Penh
-                      </a>
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="work-card-clean">
-                    <div class="work-img-wrapper">
-                      <a href="../our-work/self-storage-dvr-camera">
-                        <img
-                          src="../userfiles/IT_support_solutions/pictures-sevice-01.png"
-                          loading="lazy"
-                          alt="Putting the DVR camera security storage in the right place and securing it"
-                        />
-                      </a>
-                    </div>
-                    <h3>
-                      <a href="../our-work/self-storage-dvr-camera">
-                        Putting the DVR camera security storage in the right place and securing it
-                      </a>
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="work-card-clean">
-                    <div class="work-img-wrapper">
-                      <a href="../our-work/outdoor-ip-camera-security">
-                        <img
-                          src="../userfiles/IT_support_solutions/camera-01.jpg"
-                          loading="lazy"
-                          alt="Outdoor IP camera security installation based on location, with quality video view"
-                        />
-                      </a>
-                    </div>
-                    <h3>
-                      <a href="../our-work/outdoor-ip-camera-security">
-                        Outdoor IP camera security installation based on location, with quality video view
-                      </a>
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="work-card-clean">
-                    <div class="work-img-wrapper">
-                      <a href="../our-work/property-security-for-Security">
-                        <img
-                          src="../userfiles/IT_support_solutions/pictures-sevice-05.png"
-                          loading="lazy"
-                          alt="Invest with a budget plan to secure your property by installing a surveillance camera"
-                        />
-                      </a>
-                    </div>
-                    <h3>
-                      <a href="../our-work/property-security-for-Security">
-                        Invest with a budget plan to secure your property by installing a surveillance camera
-                      </a>
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="work-card-clean">
-                    <div class="work-img-wrapper">
-                      <a href="../our-work/Install-Camera-Hikvision-Security">
-                        <img
-                          src="../userfiles/IT_support_solutions/pictures-sevice-10.png"
-                          loading="lazy"
-                          alt="Install Camera Hikvision and Configure DVR Camera Security"
-                        />
-                      </a>
-                    </div>
-                    <h3>
-                      <a href="../our-work/Install-Camera-Hikvision-Security">
-                        Install Camera Hikvision and Configure DVR Camera Security
-                      </a>
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="work-card-clean">
-                    <div class="work-img-wrapper">
-                      <a href="../our-work/Door-Access-Control-System-Access-Reader-Security">
-                        <img
-                          src="../userfiles/IT_support_solutions/pictures-sevice-16.png"
-                          loading="lazy"
-                          alt="Door Access Control Electric Magnetic Lock, Access Reader Smart Lock Security"
-                        />
-                      </a>
-                    </div>
-                    <h3>
-                      <a href="../our-work/Door-Access-Control-System-Access-Reader-Security">
-                        Door Access Control Electric Magnetic Lock, Access Reader Smart Lock Security
-                      </a>
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="work-card-clean">
-                    <div class="work-img-wrapper">
-                      <a href="../our-work/Install-Door-Access-Control-Security">
-                        <img
-                          src="../userfiles/IT_support_solutions/pictures-sevice-19(1).png"
-                          loading="lazy"
-                          alt="Install Door Access Control Fingerprint F18 Electric Magnetic Lock Security"
-                        />
-                      </a>
-                    </div>
-                    <h3>
-                      <a href="../our-work/Install-Door-Access-Control-Security">
-                        Install Door Access Control Fingerprint F18 Electric Magnetic Lock Security
-                      </a>
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="work-card-clean">
-                    <div class="work-img-wrapper">
-                      <a href="../our-work/Service-Fringerprint-Attendance">
-                        <img
-                          src="../userfiles/IT_support_solutions/fingerprint-01(1).jpg"
-                          loading="lazy"
-                          alt="Service Install Fingerprint Report Staff Attendance System Phnom Penh"
-                        />
-                      </a>
-                    </div>
-                    <h3>
-                      <a href="../our-work/Service-Fringerprint-Attendance">
-                        Service Install Fingerprint Report Staff Attendance System Phnom Penh
-                      </a>
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="work-card-clean">
-                    <div class="work-img-wrapper">
-                      <a href="../our-work/network-ctttours">
-                        <img
-                          src="../userfiles/IT_support_solutions/pictures-service-26.png"
-                          loading="lazy"
-                          alt="Project Install Camera IP, Run Cable Network Configure NVR Camera"
-                        />
-                      </a>
-                    </div>
-                    <h3>
-                      <a href="../our-work/network-ctttours">
-                        Ceiling WiFi with a strong signal for the office internet and networking access
-                      </a>
-                    </h3>
-                  </div>
+                  </article>
                 </div>
               </div>
+              <div class="swiper-button-prev" id="work-prev"></div>
+              <div class="swiper-button-next" id="work-next"></div>
             </div>
-          </div>
-        </div>
+          </section>
+        </section>
       </div>
     </main>
 
     <div id="site-footer"></div>
 
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/modernizr.custom.js"></script>
-    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.js"></script>
     <script src="../js/pages/it-support.js"></script>
     <script src="../js/shared/layout.js"></script>
   </body>

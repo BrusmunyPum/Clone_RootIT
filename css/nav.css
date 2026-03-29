@@ -125,7 +125,7 @@
 	background: none;
 	width: auto;
 	height: auto;
-	font-family: "Font Awesome 6 Free";
+	font-family: "Font Awesome 7 Free", "Font Awesome 6 Free";
 	font-weight: 900;
 	content: "\f105";
 	margin-top: -2px;
@@ -145,7 +145,7 @@
 	background: none;
 	width: auto;
 	height: auto;
-	font-family: "Font Awesome 6 Free";
+	font-family: "Font Awesome 7 Free", "Font Awesome 6 Free";
 	font-weight: 700;
 	content: "\f0c9";
 	position: relative;
@@ -269,7 +269,7 @@
  
 	/* បន្ថែមសញ្ញាព្រួញ > នៅខាងស្តាំដៃលើ Mobile */
 	.navbar-nav>li>a:after {
-		font-family: "Font Awesome 6 Free";
+		font-family: "Font Awesome 7 Free", "Font Awesome 6 Free";
 		font-weight: 900 !important;
 		content: "\f105" !important;
 		float: right !important;

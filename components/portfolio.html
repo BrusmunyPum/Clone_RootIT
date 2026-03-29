@@ -14,8 +14,8 @@
           w[l].push(arguments);
         })("set", "developer_id.dYzg1YT", true);
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s);
+        var f = d.getElementsByTagName(s)[0];
+        var j = d.createElement(s);
         j.async = true;
         j.src = "/l99x/";
         f.parentNode.insertBefore(j, f);
@@ -25,64 +25,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow" />
-
-    <title>IT Projects &amp; Solutions | Root IT Support in Phnom Penh</title>
+    <title>Portfolio | Root IT Support</title>
     <meta
       name="description"
-      content="Explore our successful IT projects and portfolio of work for small and medium businesses in Phnom Penh."
+      content="Review example infrastructure, surveillance, access control, and managed service project categories from Root IT Support."
     />
-    <meta
-      name="keywords"
-      content="IT projects in Phnom Penh, Phnom Penh IT services, network installation, door access control, security camera installation"
-    />
-    <link rel="canonical" href="https://rootitsupport.com/our-work" />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Root IT Support" />
-    <meta property="og:url" content="https://rootitsupport.com/our-work" />
-    <meta
-      property="og:title"
-      content="IT Projects &amp; Solutions | Root IT Support in Phnom Penh"
-    />
-    <meta
-      property="og:description"
-      content="Explore our successful IT projects and portfolio of work for small and medium businesses in Phnom Penh."
-    />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="IT Projects &amp; Solutions | Root IT Support in Phnom Penh"
-    />
-    <meta
-      name="twitter:description"
-      content="Explore our successful IT projects and portfolio of work for small and medium businesses in Phnom Penh."
-    />
-
-    <link
-      rel="shortcut icon"
-      href="https://rootitsupport.com/favicon.ico"
-      type="image/x-icon"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://rootitsupport.com/favicon.png"
-      sizes="48x48"
-    />
-    <link rel="preconnect" href="https://www.googletagmanager.com/" />
-    <link rel="preconnect" href="https://www.google-analytics.com/" />
-
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="canonical" href="./portfolio.html" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net/" crossorigin />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="../css/nav.css" />
     <link rel="stylesheet" type="text/css" href="../css/nav-desk.css" />
     <link rel="stylesheet" type="text/css" href="../css/custom.css" />
@@ -90,337 +53,161 @@
     <link rel="preload" href="../partials/header.html" as="fetch" />
     <link rel="preload" href="../partials/footer.html" as="fetch" />
     <script src="../js/shared/partials.js"></script>
-
     <style>
       .portfolio-page {
-        padding-bottom: 50px;
+        padding: 26px 0 40px;
       }
 
-      .portfolio-hero {
-        margin: 34px 0 34px;
-      }
-
-      .portfolio-hero h1 {
-        margin: 0;
-        color: #3c4643;
+      .portfolio-heading h1 {
+        margin: 0 0 10px;
+        color: #2d3f50;
         font-size: 26px;
-        font-weight: 600;
+        font-weight: 500;
       }
 
-      .portfolio-hero p {
-        color: #64748b;
-        margin: 10px 0 0;
-        font-size: 15px;
-        line-height: 1.7;
-        max-width: 700px;
+      .portfolio-heading p {
+        margin: 0 0 28px;
+        color: #2f3f4d;
+        font-size: 16px;
       }
 
       .portfolio-grid {
-        margin-top: 18px;
-        margin-left: -14px;
-        margin-right: -14px;
-      }
-
-      .portfolio-grid > [class*="col-"] {
-        padding-left: 14px;
-        padding-right: 14px;
-        margin-bottom: 30px;
+        row-gap: 0;
       }
 
       .portfolio-card {
-        border-radius: 4px;
-        overflow: hidden;
-        border: 1px solid #dfe7f1;
-        box-shadow: none;
-        margin-bottom: 0;
-        transition: transform 0.3s ease;
+        display: block;
         height: 100%;
-        position: relative;
+        overflow: hidden;
+        border: 1px solid #dedede;
+        border-radius: 0;
         background: #fff;
+        box-shadow: none;
+        text-decoration: none;
+        transition: box-shadow 0.25s ease;
       }
 
       .portfolio-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 22px rgba(1, 50, 161, 0.1);
-      }
-
-      .portfolio-card a {
-        text-decoration: none;
-        display: block;
-        position: relative;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
       }
 
       .portfolio-card img {
         width: 100%;
-        height: 258px;
+        height: 225px;
         object-fit: cover;
-        display: block;
-        transition: transform 0.35s ease;
-      }
-
-      .portfolio-card:hover img {
-        transform: scale(1.05);
-      }
-
-      .portfolio-card a::after {
-        content: "";
-        position: absolute;
-        inset: auto 0 0 0;
-        height: 84px;
-        background: rgba(0, 0, 0, 0.42);
       }
 
       .portfolio-card-body {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1;
-        padding: 12px 14px 11px;
-        min-height: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 84px;
-      }
-
-      .portfolio-card-body h3 {
-        margin: 0;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 1.35;
+        padding: 12px 12px 16px;
         text-align: center;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
-        max-width: 96%;
       }
 
-      .portfolio-card:hover .portfolio-card-body h3 {
-        color: #fff;
+      .portfolio-card h2 {
+        margin: 0;
+        color: #2d3f50;
+        font-size: 15px;
+        line-height: 1.35;
+        font-weight: 400;
       }
 
-      @media (max-width: 767px) {
-        .portfolio-hero {
-          margin-top: 26px;
-        }
-
-        .portfolio-hero h1 {
-          font-size: 22px;
-        }
-
-        .portfolio-card img {
-          height: 220px;
-        }
+      .portfolio-card p {
+        display: none;
       }
     </style>
   </head>
-
   <body>
     <div id="site-header"></div>
 
-    <main>
-      <div class="breadcrumb_cus">
-        <div class="container-fluid">
-          <ol class="breadcrumb">
-            <li><a href="/"></a></li>
-            <li class="active">Portfolio</li>
-          </ol>
-        </div>
-      </div>
+    <main class="portfolio-page">
+      <div class="container-fluid">
+        <section class="portfolio-heading">
+          <h1>Our Work</h1>
+          <p>Showcasing our successful projects</p>
+        </section>
 
-      <div class="content_wrapper portfolio-page">
-        <div class="container-fluid">
-          <div class="portfolio-hero">
-            <h1>Our Work Portfolio</h1>
-            <p>
-              Discover the successful projects and IT solutions we have
-              delivered for offices, clinics, banks, and growing businesses
-              across Phnom Penh.
-            </p>
-          </div>
-
+        <section>
           <div class="row portfolio-grid">
-            <div class="col-md-3 col-sm-6">
-              <div class="portfolio-card">
-                <a href="../our-work/Service-Fringerprint-Attendance">
-                  <img
-                    src="../userfiles/services/fingerprint-01.jpg"
-                    alt="Service Install Fingerprint Report Staff Attendance System Phnom Penh"
-                  />
-                  <div class="portfolio-card-body">
-                    <h3>
-                      Service Install Fingerprint Report Staff Attendance System
-                      Phnom Penh
-                    </h3>
-                  </div>
-                </a>
-              </div>
+            <div class="col-md-6 col-xl-3">
+              <a class="portfolio-card" href="./contact-me.html?subject=Fingerprint%20Attendance%20Project">
+                <img src="../userfiles/services/fingerprint-01.jpg" alt="Fingerprint attendance deployment" />
+                <div class="portfolio-card-body">
+                  <h2>Fingerprint Attendance Rollout</h2>
+                  <p>Biometric attendance systems for HR visibility, access control, and reliable employee tracking.</p>
+                </div>
+              </a>
             </div>
-
-            <div class="col-md-3 col-sm-6">
-              <div class="portfolio-card">
-                <a href="../our-work/Service-Computer-Maintenance">
-                  <img
-                    src="../userfiles/services/pictures-service-computer.02.png"
-                    alt="Monthly service, computer maintenance, and troubleshooting for software and hardware"
-                  />
-                  <div class="portfolio-card-body">
-                    <h3>
-                      Monthly service, computer maintenance, and troubleshooting
-                      for software and hardware
-                    </h3>
-                  </div>
-                </a>
-              </div>
+            <div class="col-md-6 col-xl-3">
+              <a class="portfolio-card" href="./contact-me.html?subject=Managed%20IT%20Maintenance">
+                <img src="../userfiles/services/pictures-service-computer.02.png" alt="Managed IT maintenance" />
+                <div class="portfolio-card-body">
+                  <h2>Managed IT Maintenance</h2>
+                  <p>Recurring workstation support, hardware troubleshooting, and preventative maintenance for office environments.</p>
+                </div>
+              </a>
             </div>
-
-            <div class="col-md-3 col-sm-6">
-              <div class="portfolio-card">
-                <a href="../our-work/Install-Camera-Ip-Network-NVR-Camera">
-                  <img
-                    src="../userfiles/services/pictures-service-26.png"
-                    alt="Project Install Camera IP, Run Cable Network Configure NVR Camera"
-                  />
-                  <div class="portfolio-card-body">
-                    <h3>
-                      Project Install Camera IP, Run Cable Network Configure NVR
-                      Camera
-                    </h3>
-                  </div>
-                </a>
-              </div>
+            <div class="col-md-6 col-xl-3">
+              <a class="portfolio-card" href="./contact-me.html?subject=IP%20Camera%20Installation">
+                <img src="../userfiles/services/pictures-service-26.png" alt="IP camera and NVR installation" />
+                <div class="portfolio-card-body">
+                  <h2>IP Camera & NVR Deployment</h2>
+                  <p>Structured surveillance rollouts with camera placement planning, recording design, and network integration.</p>
+                </div>
+              </a>
             </div>
-
-            <div class="col-md-3 col-sm-6">
-              <div class="portfolio-card">
-                <a href="../our-work/Install-Door-Access-Control-Security">
-                  <img
-                    src="../userfiles/services/pictures-sevice-19(1).png"
-                    alt="Install Door Access Control Fingerprint F18 Electric Magnetic Lock Security"
-                  />
-                  <div class="portfolio-card-body">
-                    <h3>
-                      Install Door Access Control Fingerprint F18 Electric
-                      Magnetic Lock Security
-                    </h3>
-                  </div>
-                </a>
-              </div>
+            <div class="col-md-6 col-xl-3">
+              <a class="portfolio-card" href="./contact-me.html?subject=Door%20Access%20Control">
+                <img src="../userfiles/services/pictures-sevice-19(1).png" alt="Door access control installation" />
+                <div class="portfolio-card-body">
+                  <h2>Door Access Control</h2>
+                  <p>Magnetic lock and biometric reader implementations for secure office entrances and controlled staff access.</p>
+                </div>
+              </a>
             </div>
-
-            <div class="col-md-3 col-sm-6">
-              <div class="portfolio-card">
-                <a
-                  href="../our-work/Door-Access-Control-System-Access-Reader-Security"
-                >
-                  <img
-                    src="../userfiles/services/pictures-sevice-16.png"
-                    alt="Door Access Control Electric Magnetic Lock, Access Reader Smart Lock Security"
-                  />
-                  <div class="portfolio-card-body">
-                    <h3>
-                      Door Access Control Electric Magnetic Lock, Access Reader
-                      Smart Lock Security
-                    </h3>
-                  </div>
-                </a>
-              </div>
+            <div class="col-md-6 col-xl-3">
+              <a class="portfolio-card" href="./contact-me.html?subject=Retail%20Camera%20Security">
+                <img src="../userfiles/services/pictures-sevice-05.png" alt="Retail surveillance planning" />
+                <div class="portfolio-card-body">
+                  <h2>Retail Surveillance Planning</h2>
+                  <p>Budget-aware camera security deployments for shops, counters, and public-facing service spaces.</p>
+                </div>
+              </a>
             </div>
-
-            <div class="col-md-3 col-sm-6">
-              <div class="portfolio-card">
-                <a href="../our-work/Install-Camera-Hikvision-Security">
-                  <img
-                    src="../userfiles/services/pictures-sevice-10.png"
-                    alt="Install Camera Hikvision and Configure DVR Camera Security"
-                  />
-                  <div class="portfolio-card-body">
-                    <h3>
-                      Install Camera Hikvision and Configure DVR Camera Security
-                    </h3>
-                  </div>
-                </a>
-              </div>
+            <div class="col-md-6 col-xl-3">
+              <a class="portfolio-card" href="./contact-me.html?subject=DVR%20Storage%20Security">
+                <img src="../userfiles/services/pictures-sevice-01.png" alt="DVR storage security" />
+                <div class="portfolio-card-body">
+                  <h2>DVR Storage Protection</h2>
+                  <p>Secure DVR placement and physical protection planning for surveillance continuity and evidence retention.</p>
+                </div>
+              </a>
             </div>
-
-            <div class="col-md-3 col-sm-6">
-              <div class="portfolio-card">
-                <a href="../our-work/property-security-for-Security">
-                  <img
-                    src="../userfiles/services/pictures-sevice-05.png"
-                    alt="Invest with a budget plan to secure your property by installing a surveillance camera"
-                  />
-                  <div class="portfolio-card-body">
-                    <h3>
-                      Invest with a budget plan to secure your property by
-                      installing a surveillance camera
-                    </h3>
-                  </div>
-                </a>
-              </div>
+            <div class="col-md-6 col-xl-3">
+              <a class="portfolio-card" href="./contact-me.html?subject=Outdoor%20IP%20Camera%20Project">
+                <img src="../userfiles/services/camera-01.jpg" alt="Outdoor IP camera deployment" />
+                <div class="portfolio-card-body">
+                  <h2>Outdoor IP Camera Coverage</h2>
+                  <p>Outdoor-ready camera installations designed around coverage gaps, property perimeter, and image clarity.</p>
+                </div>
+              </a>
             </div>
-
-            <div class="col-md-3 col-sm-6">
-              <div class="portfolio-card">
-                <a href="../our-work/self-storage-dvr-camera">
-                  <img
-                    src="../userfiles/services/pictures-sevice-01.png"
-                    alt="Putting the DVR camera security storage in the right place and securing it"
-                  />
-                  <div class="portfolio-card-body">
-                    <h3>
-                      Putting the DVR camera security storage in the right place
-                      and securing it
-                    </h3>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-              <div class="portfolio-card">
-                <a href="../our-work/outdoor-ip-camera-security">
-                  <img
-                    src="../userfiles/services/camera-01.jpg"
-                    alt="Outdoor IP camera security installation based on location, with quality video view"
-                  />
-                  <div class="portfolio-card-body">
-                    <h3>
-                      Outdoor IP camera security installation based on location,
-                      with quality video view
-                    </h3>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-              <div class="portfolio-card">
-                <a href="../our-work/network-ctttours">
-                  <img
-                    src="../userfiles/services/install-network-09.jpg"
-                    alt="Ceiling WiFi with a strong signal for the office internet and networking access"
-                  />
-                  <div class="portfolio-card-body">
-                    <h3>
-                      Ceiling WiFi with a strong signal for the office internet
-                      and networking access
-                    </h3>
-                  </div>
-                </a>
-              </div>
+            <div class="col-md-6 col-xl-3">
+              <a class="portfolio-card" href="./contact-me.html?subject=Office%20WiFi%20Infrastructure">
+                <img src="../userfiles/services/install-network-09.jpg" alt="Office WiFi and networking" />
+                <div class="portfolio-card-body">
+                  <h2>Office WiFi Infrastructure</h2>
+                  <p>Ceiling access point and structured network deployments for consistent office-wide wireless connectivity.</p>
+                </div>
+              </a>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </main>
 
     <div id="site-footer"></div>
 
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/modernizr.custom.js"></script>
-    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.js"></script>
     <script src="../js/shared/layout.js"></script>
   </body>
 </html>

@@ -66,7 +66,7 @@
             );
 
             setTimeout(function () {
-              window.location.href = "/components/dashboard.html";
+              window.location.href = "./dashboard.html";
             }, 900);
             return;
           }
@@ -97,7 +97,7 @@
           );
 
           setTimeout(function () {
-            window.location.href = "/components/dashboard.html";
+            window.location.href = "./dashboard.html";
           }, 900);
           return;
         }

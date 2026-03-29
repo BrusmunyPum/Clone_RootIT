@@ -31,7 +31,7 @@
   function requireAuth() {
     var user = getUser();
     if (!user) {
-      window.location.href = "/components/login.html";
+      window.location.href = "./login.html";
       return null;
     }
     return user;
@@ -205,7 +205,7 @@
     logout.addEventListener("click", function (event) {
       event.preventDefault();
       setUser(null);
-      window.location.href = "/components/login.html";
+      window.location.href = "./login.html";
     });
   }
 

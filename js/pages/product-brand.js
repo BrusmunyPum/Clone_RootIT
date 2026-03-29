@@ -10,15 +10,22 @@
       .replace(/'/g, "&#39;");
   }
 
+  function slugify(value) {
+    return String(value || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  }
+
   function renderBrandCard(brand) {
     return [
-      '<div class="col-md-2 col-sm-3 col-xs-4">',
-      '  <a href="' + escapeHtml(brand.href) + '" class="brand_box">',
+      '<div class="col-md-3 col-sm-4 col-6">',
+      '  <a href="./product-all.html?brand=' + escapeHtml(slugify(brand.name)) + '" class="brand-card">',
       '    <img src="' +
         escapeHtml(brand.image) +
         '" alt="' +
         escapeHtml(brand.name) +
-        '" loading="lazy" class="img-responsive" />',
+        '" loading="lazy" class="img-fluid" />',
       "  </a>",
       "</div>",
     ].join("");
